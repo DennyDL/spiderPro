@@ -36,7 +36,7 @@ int SpiderProgramScheduler::init(int argc,char* argv[])
 
 	//载入动态模块,完成
 	char *module_path = cp->getModulePath();
-    	DsoManager *dso_manager = new DsoManager();
+    DsoManager *dso_manager = new DsoManager();
 
 
 	list<string> module_name = cp->getModuleNames();
