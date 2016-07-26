@@ -1,0 +1,9 @@
+GET /static/v2/css/min.base.css?v=20160722212341 HTTP/1.1
+Accept: text/html, image/jpeg, image/png, vedio/x-mng, text/*, image/*, */*
+Accept-Lauguage: zh-cn
+Accept-Encoding: x-gzip, x-deflate, gzip, deflat
+Accept-charset: utf-8, utf-8; q=0.5, *; q=0.5
+HOST: www.duba.com
+Connection: Keep-Alive
+Cache-Control: no-cache
+
