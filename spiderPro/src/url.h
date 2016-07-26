@@ -1,3 +1,6 @@
+#ifndef _URL_H_
+#define _URL_H_
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -6,7 +9,8 @@ struct StructUrl
 {
 	string url;
 	string protocal;
-	string siteName;
+	string siteName;//域名，网站名
+	string get;//get请求参数
 	string path;
 	string fileName;
 	int state;
@@ -26,5 +30,7 @@ private:
 	string getPath(string str_url);
 	string getFileType(string str_url);
 	string getFileName(string str_url);
+	string getGet(string str_url);
 	StructUrl m_url;
 };
+#endif
