@@ -1,0 +1,1824 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>论坛-ChinaUnix.net</title>
+
+<meta name="description" content="ChinaUnix.net论坛是中国最大的IT运维和Linux/Unix技术论坛,论坛主要交流IT运维、服务器管理、Linux/Unix运维管理、程序开发、数据库、存储备份和网络安全等技术。另外论坛还开设有开源软件孵化版块，鼎力支持国内外开源项目落户论坛讨论区！ " />
+<meta name="author" content="Discuz! Team and Comsenz UI Team" />
+<meta name="copyright" content="2001-2011 Comsenz Inc." />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<base href="http://bbs.chinaunix.net/" /><link rel="stylesheet" type="text/css" href="data/cache/style_3_common.css?9Oh" /><link rel="stylesheet" type="text/css" href="data/cache/style_3_forum_index.css?9Oh" /><script type="text/javascript">var STYLEID = '3', STATICURL = 'static/', IMGDIR = 'http://cu.img168.net/static/image/common/', VERHASH = '9Oh', charset = 'gbk', discuz_uid = '0', cookiepre = 'ndfU_81a3_', cookiedomain = '.chinaunix.net', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'login|newthread|reply|tradeorder|activity|debate|nav|usergroups|task', creditnotice = '', defaultstyle = '', REPORTURL = 'aHR0cDovL2Jicy5jaGluYXVuaXgubmV0Lw==', SITEURL = 'http://bbs.chinaunix.net/', JSPATH = 'static/js/';</script>
+
+<script src="static/js/common.js?9Oh" type="text/javascript"></script>
+<!-- 2014 -->
+<script type='text/javascript' src='http://168.it168.com/a/h599.js'></script>
+<script type="text/javascript"> 
+var jq = jQuery.noConflict();
+</script>
+
+<meta name="application-name" content="ChinaUnix.net" />
+<meta name="msapplication-tooltip" content="ChinaUnix.net" />
+<meta name="msapplication-task" content="name=论坛;action-uri=http://bbs.chinaunix.net/forum.php;icon-uri=http://bbs.chinaunix.net/http://cu.img168.net/static/image/common//bbs.ico" />
+<link rel="archives" title="ChinaUnix.net" href="http://bbs.chinaunix.net/archiver/" />
+<link rel="alternate" type="application/rss+xml" title="ChinaUnix.net" href="http://bbs.chinaunix.net/forum.php?mod=rss&auth=0" />
+<script src="static/js/forum.js?9Oh" type="text/javascript" charset=gbk></script>
+</head>
+<body id="nv_forum" class="pg_index">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<!-- 自定义 -->		
+<!--头-->
+<!--广告位置名称：首页通栏 -->
+<div id="ADV_13039"><script>LG('ADV_13039')</script></div>
+<!--2011.12.1修改 大版宽屏显示 但是莫名其妙设置中的用户组也宽屏了，打印了下gid为28.暂时不清楚为什么 -->
+<div class="wp head_top">
+<table width="100%" cellspacing="0" cellpadding="0" border="0"  align="left">
+<tr>
+<td>
+<a href="member.php?mod=logging&amp;action=login&amp;logsubmit=yes"><img src="http://www.chinaunix.net/images_new/login.gif"></img></a>
+&nbsp;&nbsp;<a href="http://u.it168.com/findPassword?returnUrl=http://bbs.chinaunix.net/home.php?mod=spacecp">忘记密码</a>
+&nbsp;&nbsp;<a href="member.php?mod=register.php">免费注册</a>
+</td>
+<td align="right">
+<a href="http://bbs.chinaunix.net/listthread.php">查看新帖</a> |
+<a href="http://www.chinaunix.net/jh/"><font color="red">论坛精华区</font></a>
+</td>
+</tr>
+<tr><td height="1" colspan="3" style="background-color:#000"></td></tr>
+</table>
+</div>
+<div id="hd">
+<div class="wp" >
+<!--LOGO和banner  -->
+<table width="100%"  style="clear: both;height:90px">
+<tr>
+<td style="padding:0">
+<h1>
+<!--2011.12.27修改只有首页去www其他去bbs-->
+<a href="http://www.chinaunix.net" title="ChinaUnix.net"><img src="http://cu.img168.net/static/image/common//logo.gif" alt="ChinaUnix.net" border="0" /></a>
+</h1>
+</td>
+<td style="padding:0" align="center">
+<!--不同页面广告位 -->
+<div id="ADV_5616" style="display:inline;"><script>LG('ADV_5616')</script></div>
+	
+</td>
+<!--2014.07.30添加广告位ADV_20649-->
+<td style="padding:0" align="center">
+<div id="ADV_20649" style="display:inline;"><script>LG('ADV_20649')</script></div>
+</td>
+</tr>
+</table>
+<!--<div id="nv">
+<a href="javascript:;" id="qmenu" onmouseover="showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});">快捷导航</a>
+<ul> --><!-- <li id="mn_Ne30e" ><a href="plugin.php?id=auction" hidefocus="true" title="Auction"  >竞拍<span>Auction</span></a></li> --><!-- <li id="mn_N2ddf" ><a href="plugin.php?id=itpub_medal:medal_shop" hidefocus="true"  >商店</a></li> --><!-- <li id="mn_forum" ><a href="forum.php" hidefocus="true" title="BBS"  >论坛<span>BBS</span></a></li> --><!-- <li id="mn_userapp" ><a href="userapp.php" hidefocus="true" title="Manyou"  >应用<span>Manyou</span></a></li> --><!-- <li id="mn_N12a7" ><a href="misc.php?mod=ranklist" hidefocus="true" title="Ranklist"  >排行榜<span>Ranklist</span></a></li> --><!--</ul>
+</div> -->
+<div id="mu" class="cl">
+</div><!--搜索框去掉20111024 -->
+</div>
+</div>
+<!--2011.11.30如果是大版则宽屏显示 -->
+<div id="wp" class="wp" >
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="background:url(static/image/common/bg_menu_top.gif)"> 
+<tbody>
+<tr><td height="2" colspan="2"></td></tr>
+<tr>
+<td width="*" valign="center" align="left">&nbsp;
+<font color="#666666"><strong>平台</strong></font>： 
+<a target="_blank" class="title2" href="http://bbs.chinaunix.net/"><font color="#5B7DB3">论坛</font></a>   
+<a target="_blank" class="title2" href="http://blog.chinaunix.net/"><font color="#5B7DB3">博客</font></a>
+<a target="_blank" class="title2" href="http://u.it168.com/vip/"><font color="#FF0000">认证专区</font></a>
+<a target="_blank" class="title2" href="http://www.chinaunix.net/talk"><font color="#FF0000">大话IT</font></a>
+<a target="_blank" class="title2" href="http://edu.chinaunix.net/"><font color="#FF0000">视频</font></a>
+<a target="_blank" class="title2" href="http://bbs.chinaunix.net/plugin.php?id=itpub_medal:medal_shop"><font color="#FF0000">徽章
+</font></a>
+<a target="_blank" class="title2" href="http://wenku.it168.com/"><font color="#5B7DB3">文库</font></a>
+<a target="_blank" class="title2" href="http://www.it168.com/itclub/"><font color="#5B7DB3">沙龙</font></a>   		
+<a target="_blank" class="title2" href="http://selftest.chinaunix.net/"><font color="#5B7DB3">自测</font></a>
+<a target="_blank" class="title2" href="http://download.chinaunix.net/"><font color="#5B7DB3">下载</font></a>
+</a><font color="#666666"><strong>频道</strong></font>：
+<a target="_blank" class="title2" href="http://www.chinaunix.net/ops/"><font color="#5B7DB3">自动化运维</font></a>   
+<a target="_blank" class="title2" href="http://www.chinaunix.net/virtual/"><font color="#5B7DB3">虚拟化</font></a>   
+ 
+<a target="_blank" class="title2" href="http://www.chinaunix.net/stor/"><font color="#5B7DB3">储存备份</font></a>  
+<a target="_blank" class="title2" href="http://www.chinaunix.net/cpp/"><font color="#5B7DB3">C/C++</font></a>  
+<a target="_blank" class="title2" href="http://www.chinaunix.net/php/"><font color="#5B7DB3">PHP</font></a>   
+<a target="_blank" class="title2" href="http://www.chinaunix.net/mysql/"><font color="#5B7DB3">MySQL</font></a>   
+<a target="_blank" class="title2" href="http://www.chinaunix.net/embedded/"><font color="#5B7DB3">嵌入式</font></a> 
+<a target="_blank" class="title2" href="http://www.chinaunix.net/linux/"><font color="#5B7DB3">Linux系统</font></a>  
+</td>
+<td>
+                            <form id="scbar_form" method="get" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="http://search.bbs.chinaunix.net/cse/search" target="_blank">
+<!--<form id="scbar_form" method="post" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="search.php?searchsubmit=yes" target="_blank">
+<form target="_blank" method="get" action="http://search.chinaunix.net/bbs.php"> 
+<input type="text" name=q  size="15" maxlength="20" style="width:60px">
+<input type="hidden" name="title" value="fulltext">
+<input type="hidden" name="st" value="title">
+<input type="hidden" name="bbs" value="1">
+<input type="hidden" name="forums" value="all">-->
+<input type="text" name="q" id="scbar_txt" autocomplete="off" style="width:80px">
+<!--					<input type="hidden" name="mod" id="scbar_mod" value="forum" />
+<input type="hidden" name="formhash" value="c31a7163" />
+<input type="hidden" name="srchtype" value="title" />
+<input type="hidden" name="srhfid" value="" id="dzsearchforumid" />
+<input type="hidden" name="srhlocality" value="forum::index" />
+<input type="hidden" name="source" value="discuz" />
+<input type="hidden" name="fId" value=""  id="cloudsearchforumId" />
+<input type="hidden" name="q" id="cloudsearchquery" value="" />-->
+                                        <input type="hidden" name="click" value="1" />
+                                        <input type="hidden" name="s" value="17746599429486556584" />
+                                        <input type="hidden" name="nsid" value="" />
+<input type="button" value="搜索" id="button" onclick="search()">
+</form>
+</td>
+</tr>
+<tr><td height="2" colspan="2"></td></tr> 
+</tbody>
+</table>
+<script>
+function search(){
+    val = document.getElementById("scbar_txt").value;
+    if(val == ""){
+        location.href = "http://search.bbs.chinaunix.net/";
+    }else{
+         location.href = "http://search.bbs.chinaunix.net/cse/search?q="+val+"&click=1&s=17746599429486556584&nsid= ";
+    }
+}
+   
+</script><!---导航开始------>
+<style type="text/css"><!--.box0408{margin:0 auto;height:50px;background:#f0f3fa;}.box0408 ul{padding-top:6px;}.box0408 ul li{float:left;width:460px;line-height:20px;text-align:left;}.box0408 ul li a.red{color:#f00;}--></style>
+<div class="box0408">
+<ul>
+  <li><b>[操作系统]</b> <a href="forum-216-1.html">Linux新手园地</a>&nbsp;&nbsp;<a href="forum-217-1.html" class="red">系统管理</a>&nbsp;&nbsp;<a href="forum-271-1.html">Linux桌面</a>&nbsp;&nbsp;<a href="forum-5-1.html">BSD技术</a>&nbsp;&nbsp;<a href="forum-6-1.html">Solaris</a>&nbsp;&nbsp;<a href="forum-9-1.html">AIX </a></li>
+  <li><b>[程序开发]</b> <a href="forum-23-1.html">C/C++</a>&nbsp;&nbsp;<a href="forum-24-1.html">Shell</a>&nbsp;&nbsp;<a href="forum-25-1.html">Perl</a>&nbsp;&nbsp;<a href="forum-27-1.html">PHP</a>&nbsp;&nbsp;<a href="forum-55-1.html">Python</a>&nbsp;&nbsp;<a href="forum-225-1.html">嵌入式开发</a>&nbsp;&nbsp;<a href="forum-224-1.html" class="red">内核源码</a></li>
+  <li><b>[IT运维]</b> <a href="forum-185-1.html" class="red">架构设计</a>&nbsp;<a href="forum-233-1.html">高可用集群</a>&nbsp;<a href="forum-232-1.html">服务器应用</a>&nbsp;<a href="forum-34-1.html">存储技术</a>&nbsp;<a href="forum-30-1.html">网络技术</a>&nbsp;<a href="forum-19-1.html">Oracle </a>&nbsp;<a href="forum-17-1.html">MySQL </a></li>
+  <li><b>[综合交流]</b> <a href="forum-46-1.html">业界新闻和评论</a>&nbsp;&nbsp;<a href="forum-32-1.html" class="red">职业生涯</a>&nbsp;&nbsp;<a href="forum-123-1.html">CU活动专区</a>&nbsp;&nbsp;<a href="forum-249-1.html">资源下载</a></li>
+</ul>
+</div>
+<!---导航结束------>
+<!-- 首页五栏 -->
+<div style="width:100%;height:auto"><table cellpadding="0" cellspacing="1" class="tab30"><tr><th width="20%"><a href="http://www.chinaunix.net/talk" target="_blank">大话IT</a></th><th width="20%"><a href="forummodule-2-0-1.html" target="_blank">热门话题</a></th><th width="20%"><a href="forummodule-3-0-1.html" target="_blank">论坛精华</a></th><th width="20%"><a href="forummodule-4-0-1.html" target="_blank">全站推荐</a></th><th width="20%"><a href="http://blog.chinaunix.net/" target="_blank">博客热门</a></th></tr><tr><td valign="top"><ul><li><div>·<a href="thread-4251159-1-1.html" title="【大话IT】快无止境，这是一场关乎时间的竞争！" target="_blank">【大话IT】快无止境，这是一场关乎时间的竞争！</a></div></li><li><div>·<a href="thread-4251062-1-1.html" title="【大话IT】系统架构已死！？这事你怎么看" target="_blank">【大话IT】系统架构已死！？这事你怎么看</a></div></li><li><div>·<a href="thread-4250858-1-1.html" title="【创客168】第6期：云端运维技术实践" target="_blank">【创客168】第6期：云端运维技术实践</a></div></li><li><div>·<a href="thread-4250344-1-1.html" title="【2016中国系统架构师大会正式起航！】参与SACC2016相关议题讨论，赢大会门票！" target="_blank">【2016中国系统架构师大会正式起航！】参与SACC2016相关议题讨论，赢大会门票！</a></div></li><li><div>·<a href="thread-4250341-1-1.html" title="【专家坐镇，16本图书大礼】熟知内核及应用态，打通Linux编程任督二脉" target="_blank">【专家坐镇，16本图书大礼】熟知内核及应用态，打通Linux编程任督二脉</a></div></li><li><div>·<a href="thread-4246767-1-1.html" title="【大话IT】蝙蝠侠大战超人？聊聊超融合架构 VS 软件定义存储" target="_blank">【大话IT】蝙蝠侠大战超人？聊聊超融合架构 VS 软件定义存储</a></div></li><li><div>·<a href="thread-4246722-1-1.html" title="Ghostcloud四城联动大型巡讲：让Docker听到中国的声音！" target="_blank">Ghostcloud四城联动大型巡讲：让Docker听到中国的声音！</a></div></li><li><div>·<a href="thread-4246717-1-1.html" title="【安全运维大讨论，参与有礼】用开源软件架构集成安全运维平台" target="_blank">【安全运维大讨论，参与有礼】用开源软件架构集成安全运维平台</a></div></li><li><div>·<a href="thread-4246570-1-1.html" title="【创客168】第5期：初创企业的运维和业务架构设计" target="_blank">【创客168】第5期：初创企业的运维和业务架构设计</a></div></li></ul></td><td valign="top"><ul><li><div>·<a href="thread-4251397-1-1.html" title="求教一个shell" target="_blank">求教一个shell</a></div></li><li><div>·<a href="thread-4251396-1-1.html" title="如何提取特定符号行中的关键字并输出随后几行" target="_blank">如何提取特定符号行中的关键字并输出随后几行</a></div></li><li><div>·<a href="thread-4251158-1-1.html" title="有回车的“行”处理" target="_blank">有回车的“行”处理</a></div></li><li><div>·<a href="thread-4251345-1-1.html" title="大神好，请问选择性截取列怎样表达？" target="_blank">大神好，请问选择性截取列怎样表达？</a></div></li><li><div>·<a href="thread-4251313-1-1.html" title="请大神进来看看错在哪里了？" target="_blank">请大神进来看看错在哪里了？</a></div></li><li><div>·<a href="thread-4251296-1-1.html" title="perl可以按列处理数据吗？" target="_blank">perl可以按列处理数据吗？</a></div></li><li><div>·<a href="thread-4250935-1-1.html" title="linux  怎么用C或shell获取防火墙是否开启或关闭状态，如果关闭又怎么开启" target="_blank">linux  怎么用C或shell获取防火墙是否开启或关闭状态，如果关闭又怎么开启</a></div></li><li><div>·<a href="thread-4251248-1-1.html" title="处理两个大文本" target="_blank">处理两个大文本</a></div></li><li><div>·<a href="thread-4251214-1-1.html" title="[shell]有缩进的行需要合并应该怎么操作啊?" target="_blank">[shell]有缩进的行需要合并应该怎么操作啊?</a></div></li></ul></td><td valign="top"><ul><li><div>·<a href="thread-4248159-1-1.html" title="UEFI+GPT 纯 UFS 根分区加密安装 FreeBSD 教程" target="_blank">UEFI+GPT 纯 UFS 根分区加密安装 FreeBSD 教程</a></div></li><li><div>·<a href="thread-4248004-1-1.html" title="bitfield与endian" target="_blank">bitfield与endian</a></div></li><li><div>·<a href="thread-4246512-1-1.html" title="关于 awk 的 pattern(模式)" target="_blank">关于 awk 的 pattern(模式)</a></div></li><li><div>·<a href="thread-4245729-1-1.html" title="Intel网卡驱动分析（igb)" target="_blank">Intel网卡驱动分析（igb)</a></div></li><li><div>·<a href="thread-4245726-1-1.html" title="linux内核总结笔记" target="_blank">linux内核总结笔记</a></div></li><li><div>·<a href="thread-4244870-1-1.html" title="计划开发高性能KV数据库, 模仿MongoDB, 练手贴+日记贴" target="_blank">计划开发高性能KV数据库, 模仿MongoDB, 练手贴+日记贴</a></div></li><li><div>·<a href="thread-4235811-1-1.html" title="perl6intro翻译(第八章-第十章)" target="_blank">perl6intro翻译(第八章-第十章)</a></div></li><li><div>·<a href="thread-4234555-1-1.html" title="【转载】opencv2.4.9移植迅为4412开发板文档" target="_blank">【转载】opencv2.4.9移植迅为4412开发板文档</a></div></li><li><div>·<a href="thread-4234041-1-1.html" title="安全部署MongoDB最佳实践" target="_blank">安全部署MongoDB最佳实践</a></div></li></ul></td><td valign="top"><ul><li><div>·<a href="thread-2075757-1-1.html" title="程序开发/嵌入式/内核/网络安全/系统管理/集群资料汇总贴！" target="_blank">程序开发/嵌入式/内核/网络安全/系统管理/集群资料汇总贴！</a></div></li><li><div>·<a href="thread-2075975-1-1.html" title="Linux新手入门常用下载资料贴！" target="_blank">Linux新手入门常用下载资料贴！</a></div></li><li><div>·<a href="thread-1930079-1-1.html" title="内核源码版精华帖分类汇总" target="_blank">内核源码版精华帖分类汇总</a></div></li><li><div>·<a href="thread-3675396-1-1.html" title="MongoDB资料汇总专题" target="_blank">MongoDB资料汇总专题</a></div></li><li><div>·<a href="thread-3672734-1-1.html" title="Redis资料汇总专题" target="_blank">Redis资料汇总专题</a></div></li><li><div>·<a href="thread-218853-1-1.html" title="shell 十三問?" target="_blank">shell 十三問?</a></div></li><li><div>·<a href="thread-286646-1-1.html" title="【资源集合】c/c++ 书籍、网页、文档、资料（不断增加中……）" target="_blank">【资源集合】c/c++ 书籍、网页、文档、资料（不断增加中……）</a></div></li><li><div>·<a href="thread-2164218-1-1.html" title="主要Linux 平台高可用HA集群软件简介及软件下载 最后更新:20070704" target="_blank">主要Linux 平台高可用HA集群软件简介及软件下载 最后更新:20070704</a></div></li><li><div>·<a href="thread-668923-1-1.html" title="[新手提问前请先参考]OpenSolaris/Solaris中文FAQ及学习索引(非常全面)" target="_blank">[新手提问前请先参考]OpenSolaris/Solaris中文FAQ及学习索引(非常全面)</a></div></li></ul></td><td valign="top"><ul><li><div>·<a href="http://blog.chinaunix.net/uid-20332519-id-5747538.html" title="webuploader放入bootstap的tab-content时，不能正确初始化" target="_blank">webuploader放入bootstap的tab-content时，不能正确初始化</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-31140357-id-5747537.html" title="一个关于输入输出的问题" target="_blank">一个关于输入输出的问题</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-23284114-id-5747427.html" title="Zabbix监控oracle数据库" target="_blank">Zabbix监控oracle数据库</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-27216042-id-5747338.html" title="TortoiseGit putty key" target="_blank">TortoiseGit putty key</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-20788636-id-5747330.html" title="docker的跨主机解决方案weave----遇到的坑（1）" target="_blank">docker的跨主机解决方案weave----遇到的坑（1）</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-27666459-id-5747129.html" title="Linux内核调用用户空间程序的一般方法分析" target="_blank">Linux内核调用用户空间程序的一般方法分析</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-28541347-id-5747108.html" title="Linux内核基数树应用分析" target="_blank">Linux内核基数树应用分析</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-31008720-id-5745934.html" title="Linux Samba服务器搭建" target="_blank">Linux Samba服务器搭建</a></div></li><li><div>·<a href="http://blog.chinaunix.net/uid-31008720-id-5745926.html" title="Linux NFS服务器搭建" target="_blank">Linux NFS服务器搭建</a></div></li></ul></td></tr></table><style>.tab30{width:100%;background:#000000;font-size:12px;border-collapse:separate;}.tab30 th{background:#9898ba;color:#fff;font-weight:bold;text-align:center;height:20px;}.tab30 th a{color:#FFFF00;}.tab30 td{padding:4px;background:#ffffff;}.tab30 td li{line-height:18px;width:180px;}.tab30 td li div{height:18px;overflow:Hidden;width:180px;}.tab30 td li div a{color:#000;text-decoration:none;}.tab30 td li div a:hover{color:#f00;}p,div,form,ul,ol,li,dl,dt,dd{margin:0;padding:0;}ul,ol,li{list-style:none;}</style></div>
+<!--广告开始 里面是正式标签，大版不显示2011.11.30-->
+<table cellspacing="0" height=65 cellpadding="0" border="0"  align="center" style="margin:10px 0 0px 5px"> 
+<tr><td align=center ><div id='ADV_16831'></div></td><td align=center ><div id='ADV_17564'></div></td></tr>
+</table>
+<!-- 广告位置4条文字链 -->
+<table width="960px" cellspacing="0" height=20 cellpadding="0" border="0" align="center" > 
+<tr><td align=center ><div id='ADV_16487'></div></td><td align=center ><div id='ADV_17396'></div></td><td align=center ><div id='ADV_17397'></div></td><td align=center ><div id='ADV_17398'></div></td></tr>
+</table>
+<div id="ct" class="wp cl">
+<div class="mn">
+<!-- 以下是首页板块循环开始 --><div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<a href="./expand/newthreads/277.html" target="_blank">本版新帖</a>
+<img id="category_277_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_277');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=277" style="font-family:宋体">IT运维</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_277" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-327-1.html"><img src="data/attachment/common/b8/common_327_icon.jpg" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-327-1.html" >Docker</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4248030&amp;goto=lastpost"><font color=#666666>07-23 16:24</font></a>
+<font color=#666666>by <a href="space-username-action08.html">action08</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/327.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 181</font></td><td><font color=#666666>帖数: 951</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-141-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_141_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-141-1.html" >监控及自动化运维技术</a> 
+	
+(1)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251393&amp;goto=lastpost"><font color=#666666>07-25 11:13</font></a>
+<font color=#666666>by <a href="space-username-zxcbvbbbbb.html">zxcbvbbbbb</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/141.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 4450</font></td><td><font color=#666666>帖数: 22865</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-233-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_233_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-233-1.html" >集群和高可用</a> 
+	
+(2)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=1978217&amp;goto=lastpost"><font color=#666666>07-25 20:26</font></a>
+<font color=#666666>by <a href="space-username-niao5929.html">niao5929</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/233.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 7333</font></td><td><font color=#666666>帖数: 42415</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-232-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_232_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-232-1.html" >服务器应用</a> 
+	
+(7)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251437&amp;goto=lastpost"><font color=#666666>07-25 17:48</font></a>
+<font color=#666666>by <a href="space-username-qq294771996.html">qq294771996</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/232.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 84111</font></td><td><font color=#666666>帖数: 379925</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-283-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_283_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-283-1.html" >虚拟化与云服务</a> 
+	
+(3)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4168118&amp;goto=lastpost"><font color=#666666>07-25 11:36</font></a>
+<font color=#666666>by <a href="space-username-tanguoz.html">tanguoz</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/283.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 11371</font></td><td><font color=#666666>帖数: 4294979048</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-240-1.html"><img src="data/attachment/common/33/common_240_icon.jpg" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-240-1.html" >分布式文件系统（FastDFS）</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=1920470&amp;goto=lastpost"><font color=#666666>07-22 23:09</font></a>
+<font color=#666666>by <a href="space-username-liupanhu.html">liupanhu</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/240.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 2062</font></td><td><font color=#666666>帖数: 9145</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-29-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/safe.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-29-1.html" >数据安全</a> 
+	
+(6)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251420&amp;goto=lastpost"><font color=#666666>07-25 14:54</font></a>
+<font color=#666666>by <a href="space-username-%BB%A5%C1%AA%CD%F8%BB%B7%BE%B3%B0%B2%C8%AB%B7%E5%BB%E1.html">互联网环境安全峰会</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/29.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 20222</font></td><td><font color=#666666>帖数: 100001</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-45-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/server.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-45-1.html" >服务器及硬件技术</a> 
+	
+(2)
+&nbsp;&nbsp;
+<a href=forum-186-1.html target=_blank><font style="color:red;font-weight:normal">Power服务器</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251423&amp;goto=lastpost"><font color=#666666>07-25 15:37</font></a>
+<font color=#666666>by <a href="space-username-cjfeii.html">cjfeii</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/45.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 13141</font></td><td><font color=#666666>帖数: 65430</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-34-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/memory.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-34-1.html" >存储备份</a> 
+	
+(2)
+&nbsp;&nbsp;
+<a href=forum-194-1.html target=_blank><font style="color:red;font-weight:normal">Veritas专区</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251159&amp;goto=lastpost"><font color=#666666>07-25 10:58</font></a>
+<font color=#666666>by <a href="space-username-laputa73.html">laputa73</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/34.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 50413</font></td><td><font color=#666666>帖数: 201366</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-30-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/technical.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-30-1.html" >网络技术</a> 
+	
+(8)
+&nbsp;&nbsp;
+<a href=http://net.chinaunix.net/ target=_blank><font style="color:red;font-weight:normal">网络社区</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251430&amp;goto=lastpost"><font color=#666666>07-25 17:09</font></a>
+<font color=#666666>by <a href="space-username-yiguihuo.html">yiguihuo</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/30.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 49782</font></td><td><font color=#666666>帖数: 172256</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-285-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_285_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-285-1.html" >初创企业IT架构选型</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251062&amp;goto=lastpost"><font color=#666666>07-23 17:18</font></a>
+<font color=#666666>by <a href="space-username-tangjsc.html">tangjsc</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/285.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 6101</font></td><td><font color=#666666>帖数: 27758</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-81-1.html"><img src="data/attachment/common/icon/soft.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-81-1.html" >中间件技术</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4193283&amp;goto=lastpost"><font color=#666666>06-25 00:23</font></a>
+<font color=#666666>by <a href="space-username-%BF%AA%D4%B4%BD%AB%BE%FC.html">开源将军</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/81.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 3148</font></td><td><font color=#666666>帖数: 11450</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-326-1.html"><img src="data/attachment/common/a6/common_326_icon.jpg" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-326-1.html" >Hadoop和大数据技术</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4250811&amp;goto=lastpost"><font color=#666666>07-12 18:26</font></a>
+<font color=#666666>by <a href="space-username-q1208c.html">q1208c</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/326.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 249</font></td><td><font color=#666666>帖数: 886</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<a href="./expand/newthreads/57.html" target="_blank">本版新帖</a>
+<img id="category_57_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_57');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=57" style="font-family:宋体">操作系统</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_57" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-216-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_216_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-216-1.html" >Linux新手园地</a> 
+	
+(5)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251402&amp;goto=lastpost"><font color=#666666>07-25 21:25</font></a>
+<font color=#666666>by <a href="space-username-shang2010.html">shang2010</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/216.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 182588</font></td><td><font color=#666666>帖数: 4295299040</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-217-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_217_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-217-1.html" >Linux系统管理</a> 
+	
+(14)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251371&amp;goto=lastpost"><font color=#666666>07-25 20:06</font></a>
+<font color=#666666>by <a href="space-username-action08.html">action08</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/217.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 123400</font></td><td><font color=#666666>帖数: 673999</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-118-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/inos.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-118-1.html" >Windows系统</a> 
+	
+(3)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251424&amp;goto=lastpost"><font color=#666666>07-25 16:16</font></a>
+<font color=#666666>by <a href="space-username-xtgi8921.html">xtgi8921</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/118.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 10464</font></td><td><font color=#666666>帖数: 54981</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-5-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/freebsd.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-5-1.html" >BSD</a> 
+	
+(3)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251337&amp;goto=lastpost"><font color=#666666>07-25 22:00</font></a>
+<font color=#666666>by <a href="space-username-action08.html">action08</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/5.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 46132</font></td><td><font color=#666666>帖数: 292740</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-9-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/aix.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-9-1.html" >AIX</a> 
+	
+(1)
+&nbsp;&nbsp;
+<a href=http://power.chinaunix.net target=_blank><font style="color:red;font-weight:normal">Power中国用户组</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251278&amp;goto=lastpost"><font color=#666666>07-25 10:43</font></a>
+<font color=#666666>by <a href="space-username-interwenq.html">interwenq</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/9.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 46981</font></td><td><font color=#666666>帖数: 237800</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-10-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/ibm.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-10-1.html" >AS400</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251235&amp;goto=lastpost"><font color=#666666>07-21 22:54</font></a>
+<font color=#666666>by <a href="space-username-pacman2000.html">pacman2000</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/10.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 14138</font></td><td><font color=#666666>帖数: 94386</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-6-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/solaris.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-6-1.html" >Solaris</a> 
+	
+(2)
+&nbsp;&nbsp;
+<a href=forum-128-1.html target=_blank><font style="color:red;font-weight:normal"> Solaris文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251394&amp;goto=lastpost"><font color=#666666>07-25 12:27</font></a>
+<font color=#666666>by <a href="space-username-nimysun.html">nimysun</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/6.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 80164</font></td><td><font color=#666666>帖数: 451639</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-8-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/hp.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-8-1.html" >HP-UX</a> 
+	
+(0)
+&nbsp;&nbsp;
+<a href=forum-129-1.html target=_blank><font style="color:red;font-weight:normal"> HP文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4250429&amp;goto=lastpost"><font color=#666666>07-22 17:02</font></a>
+<font color=#666666>by <a href="space-username-lucwd.html">lucwd</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/8.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 19915</font></td><td><font color=#666666>帖数: 99928</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-7-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/sco.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-7-1.html" >其他UNIX</a> 
+	
+(0)
+&nbsp;&nbsp;
+<a href=forum-130-1.html target=_blank><font style="color:red;font-weight:normal"> SCO文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4234834&amp;goto=lastpost"><font color=#666666>05-26 09:45</font></a>
+<font color=#666666>by <a href="space-username-muwanqing_cu.html">muwanqing_cu</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/7.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 48925</font></td><td><font color=#666666>帖数: 248025</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-222-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_222_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-222-1.html" >移动操作系统</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=3631849&amp;goto=lastpost"><font color=#666666>07-10 14:50</font></a>
+<font color=#666666>by <a href="space-username-peiyang_z.html">peiyang_z</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/222.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 8776</font></td><td><font color=#666666>帖数: 15317</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-41-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/mac.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-41-1.html" >Mac OS X</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4130817&amp;goto=lastpost"><font color=#666666>07-23 04:44</font></a>
+<font color=#666666>by <a href="space-username-East3gold.html">East3gold</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/41.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 2526</font></td><td><font color=#666666>帖数: 14625</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<a href="./expand/newthreads/60.html" target="_blank">本版新帖</a>
+<img id="category_60_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_60');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=60" style="font-family:宋体">程序设计</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_60" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-23-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/cpp.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-23-1.html" >C/C++</a> 
+	
+(13)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251372&amp;goto=lastpost"><font color=#666666>07-25 17:49</font></a>
+<font color=#666666>by <a href="space-username-1581526111.html">1581526111</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/23.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 79069</font></td><td><font color=#666666>帖数: 671678</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-223-1.html"><img src="http://cu.img168.net/static/image/common/tubiao//common_223_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-223-1.html" >Linux环境编程</a> 
+	
+(2)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251411&amp;goto=lastpost"><font color=#666666>07-25 21:32</font></a>
+<font color=#666666>by <a href="space-username-MMMIX.html">MMMIX</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/223.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 15365</font></td><td><font color=#666666>帖数: 68680</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-224-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_224_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-224-1.html" >内核源码</a> 
+	
+(12)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4250341&amp;goto=lastpost"><font color=#666666>07-25 22:01</font></a>
+<font color=#666666>by <a href="space-username-GFree_Wind.html">GFree_Wind</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/224.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 25380</font></td><td><font color=#666666>帖数: 153419</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-24-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/shell.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-24-1.html" >Shell</a> 
+	
+(66)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251433&amp;goto=lastpost"><font color=#666666>07-25 19:22</font></a>
+<font color=#666666>by <a href="space-username-bmne.html">bmne</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/24.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 61031</font></td><td><font color=#666666>帖数: 511068</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-25-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/perl.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-25-1.html" >Perl</a> 
+	
+(2)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251267&amp;goto=lastpost"><font color=#666666>07-25 11:28</font></a>
+<font color=#666666>by <a href="space-username-wx2wx.html">wx2wx</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/25.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 23965</font></td><td><font color=#666666>帖数: 165013</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-26-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/java.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-26-1.html" >Java</a> 
+	
+(1)
+&nbsp;&nbsp;
+<a href=forum-133-1.html target=_blank><font style="color:red;font-weight:normal">Java文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251426&amp;goto=lastpost"><font color=#666666>07-25 16:31</font></a>
+<font color=#666666>by <a href="space-username-%C0%CF%B3%C273.html">老陈73</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/26.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 33157</font></td><td><font color=#666666>帖数: 87567</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-27-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/php.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-27-1.html" >PHP</a> 
+	
+(0)
+&nbsp;&nbsp;
+<a href=forum-135-1.html target=_blank><font style="color:red;font-weight:normal">PHP文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4248110&amp;goto=lastpost"><font color=#666666>07-20 16:46</font></a>
+<font color=#666666>by <a href="space-username-Franklinhong.html">Franklinhong</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/27.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 28055</font></td><td><font color=#666666>帖数: 115776</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-55-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/python.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-55-1.html" >Python</a> 
+	
+(5)
+&nbsp;&nbsp;
+<a href=forum-132-1.html target=_blank><font style="color:red;font-weight:normal">Python文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251427&amp;goto=lastpost"><font color=#666666>07-25 19:22</font></a>
+<font color=#666666>by <a href="space-username-%B3%D4%B9%CF%C8%BA%D6%DA.html">吃瓜群众</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/55.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 14109</font></td><td><font color=#666666>帖数: 70340</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-116-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/ruby.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-116-1.html" >Ruby</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4246701&amp;goto=lastpost"><font color=#666666>06-06 11:19</font></a>
+<font color=#666666>by <a href="space-username-jerryking_cn.html">jerryking_cn</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/116.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 1160</font></td><td><font color=#666666>帖数: 5842</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-225-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_225_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-225-1.html" >嵌入式开发</a> 
+	
+(5)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4247161&amp;goto=lastpost"><font color=#666666>07-25 15:45</font></a>
+<font color=#666666>by <a href="space-username-Vinge.html">Vinge</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/225.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 9267</font></td><td><font color=#666666>帖数: 47352</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-227-1.html"><img src="data/attachment/common/70/common_227_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-227-1.html" >驱动开发</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=3771774&amp;goto=lastpost"><font color=#666666>07-06 23:13</font></a>
+<font color=#666666>by <a href="space-username-PP%B5%F8%CC%DB.html">PP跌疼</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/227.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 3378</font></td><td><font color=#666666>帖数: 18146</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-80-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/web.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-80-1.html" >Web开发</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4250966&amp;goto=lastpost"><font color=#666666>07-15 16:19</font></a>
+<font color=#666666>by <a href="space-username-cdsfiui.html">cdsfiui</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/80.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 8505</font></td><td><font color=#666666>帖数: 20000</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-185-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_185_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-185-1.html" >架构设计</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4190548&amp;goto=lastpost"><font color=#666666>06-29 09:03</font></a>
+<font color=#666666>by <a href="space-username-gshgsh418.html">gshgsh418</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/185.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 266</font></td><td><font color=#666666>帖数: 3936</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-226-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_226_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-226-1.html" >CPU与编译器</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251061&amp;goto=lastpost"><font color=#666666>07-18 16:36</font></a>
+<font color=#666666>by <a href="space-username-liushuiwu.html">liushuiwu</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/226.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 1992</font></td><td><font color=#666666>帖数: 14718</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-99-1.html"><img src="data/attachment/common/icon/clearcase.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-99-1.html" >软件配置管理</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4250406&amp;goto=lastpost"><font color=#666666>07-05 14:55</font></a>
+<font color=#666666>by <a href="space-username-andywhitestar.html">andywhitestar</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/99.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 3317</font></td><td><font color=#666666>帖数: 14065</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-321-1.html"><img src="data/attachment/common/ca/common_321_icon.jpg" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-321-1.html" >Golang</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4233291&amp;goto=lastpost"><font color=#666666>07-08 20:37</font></a>
+<font color=#666666>by <a href="space-username-zsszss0000.html">zsszss0000</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/321.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 94</font></td><td><font color=#666666>帖数: 710</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-323-1.html"><img src="data/attachment/common/bc/common_323_icon.jpg" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-323-1.html" >Erlang</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4245941&amp;goto=lastpost"><font color=#666666>06-30 09:34</font></a>
+<font color=#666666>by <a href="space-username-shijiang1130.html">shijiang1130</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/323.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 355</font></td><td><font color=#666666>帖数: 2041</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<a href="./expand/newthreads/59.html" target="_blank">本版新帖</a>
+<img id="category_59_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_59');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=59" style="font-family:宋体">数据库技术</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_59" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-17-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/mysql.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-17-1.html" >MySQL</a> 
+	
+(2)
+&nbsp;&nbsp;
+<a href=forum-136-1.html target=_blank><font style="color:red;font-weight:normal">MySQL文档中心</font></a> 
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251432&amp;goto=lastpost"><font color=#666666>07-25 17:29</font></a>
+<font color=#666666>by <a href="space-username-%B9%E9%D2%FE%CF%E7%B4%E5.html">归隐乡村</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/17.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 29578</font></td><td><font color=#666666>帖数: 110621</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-21-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/sybase.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-21-1.html" >Sybase</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251131&amp;goto=lastpost"><font color=#666666>07-20 09:58</font></a>
+<font color=#666666>by <a href="space-username-Eisen.html">Eisen</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/21.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 15693</font></td><td><font color=#666666>帖数: 76781</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-19-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/oracle.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-19-1.html" >Oracle</a> 
+	
+(1)
+&nbsp;&nbsp;
+<a href="http://bbs.chinaunix.net/forum-325-1.html" target="_blank"><font style="color:red;font-weight:normal">甲骨文藏经阁</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=1693532&amp;goto=lastpost"><font color=#666666>07-25 07:58</font></a>
+<font color=#666666>by <a href="space-username-oar.html">oar</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/19.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 39124</font></td><td><font color=#666666>帖数: 160412</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-18-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/postgresql.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-18-1.html" >PostgreSQL</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251334&amp;goto=lastpost"><font color=#666666>07-23 15:46</font></a>
+<font color=#666666>by <a href="space-username-not_halt.html">not_halt</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/18.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 2985</font></td><td><font color=#666666>帖数: 12026</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-22-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/db2.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-22-1.html" >DB2</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4247070&amp;goto=lastpost"><font color=#666666>06-22 12:41</font></a>
+<font color=#666666>by <a href="space-username-%B4%F3%C3%CE.html">大梦</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/22.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 8700</font></td><td><font color=#666666>帖数: 36612</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-20-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/informix .gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-20-1.html" >Informix</a> 
+	
+(3)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251436&amp;goto=lastpost"><font color=#666666>07-25 18:05</font></a>
+<font color=#666666>by <a href="space-username-jianweixue.html">jianweixue</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/20.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 13836</font></td><td><font color=#666666>帖数: 69191</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-140-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_140_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-140-1.html" >数据仓库与数据挖掘</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4247811&amp;goto=lastpost"><font color=#666666>06-23 15:20</font></a>
+<font color=#666666>by <a href="space-username-LCHYRJ.html">LCHYRJ</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/140.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 634</font></td><td><font color=#666666>帖数: 2140</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-292-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_292_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-292-1.html" >NoSQL技术</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251305&amp;goto=lastpost"><font color=#666666>07-22 17:02</font></a>
+<font color=#666666>by <a href="space-username-lyhabc.html">lyhabc</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/292.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 920</font></td><td><font color=#666666>帖数: 5197</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<img id="category_62_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_62');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=62" style="font-family:宋体">综合交流区</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_62" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-46-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/itnews.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-46-1.html" >IT资讯</a> 
+	
+(5)
+&nbsp;&nbsp;
+<!--		<a href=http://news.chinaunix.net target=_blank><font style="color:red;font-weight:normal">IT新闻频道</font></a> | -->
+                <a href="http://www.chinaunix.net/talk/" target=_blank><font style="color:red;font-weight:normal">大话IT</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251428&amp;goto=lastpost"><font color=#666666>07-25 16:49</font></a>
+<font color=#666666>by <a href="space-username-%EC%C5%D1%A9.html">炫雪</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/46.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 10339</font></td><td><font color=#666666>帖数: 22131</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-32-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/job.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-32-1.html" >IT职业生涯</a> 
+	
+(8)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251361&amp;goto=lastpost"><font color=#666666>07-25 21:18</font></a>
+<font color=#666666>by <a href="space-username-shang2010.html">shang2010</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/32.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 77188</font></td><td><font color=#666666>帖数: 4295313174</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-82-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/book.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-82-1.html" >IT图书与评论</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4141274&amp;goto=lastpost"><font color=#666666>07-15 10:35</font></a>
+<font color=#666666>by <a href="space-username-tn1587.html">tn1587</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/82.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 2493</font></td><td><font color=#666666>帖数: 21132</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-54-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/secondhand.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-54-1.html" >二手交易</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=3684546&amp;goto=lastpost"><font color=#666666>12-18 22:49</font></a>
+<font color=#666666>by <a href="space-username-sunzhiguolu.html">sunzhiguolu</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/54.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 19218</font></td><td><font color=#666666>帖数: 43388</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-249-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_249_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-249-1.html" >下载共享</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4085711&amp;goto=lastpost"><font color=#666666>07-24 15:32</font></a>
+<font color=#666666>by <a href="space-username-youkejieniu.html">youkejieniu</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/249.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 1522</font></td><td><font color=#666666>帖数: 109529</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<div style="clear:both; margin-bottom:10px">
+<table  width="100%" cellspacing="0" cellpadding="0" bordercolor="#000000" border="1" align="center" style="border-collapse:collapse" >
+<tbody>
+<tr>
+<td class="header" colspan="7" >
+<div style="padding: 0px" class="subtable">
+<div class="right">
+<img id="category_56_img" src="http://cu.img168.net/static/image/common//collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_56');" style="cursor:pointer"/>&nbsp;
+</div>
+<h2 style="float:left">
+<a href="forum.php?gid=56" style="font-family:宋体">站务及频道</a>
+</h2>
+</div>
+</td>
+</tr>
+</tbody>
+<tbody id="category_56" style="">
+<tr><!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-2-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/bz3.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-2-1.html" >站务交流</a> 
+	
+(3)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251410&amp;goto=lastpost"><font color=#666666>07-25 16:53</font></a>
+<font color=#666666>by <a href="space-username-send_linux.html">send_linux</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/2.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 11624</font></td><td><font color=#666666>帖数: 113890</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-51-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/blog.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-51-1.html" >博客SNS站务交流区</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251355&amp;goto=lastpost"><font color=#666666>07-24 15:26</font></a>
+<font color=#666666>by <a href="space-username-Mr%D0%A1%CD%F2.html">Mr小万</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/51.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 2675</font></td><td><font color=#666666>帖数: 12342</font></td></tr>
+</table>
+</td>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-123-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/common_123_icon.png" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-123-1.html" >CU活动专区</a> 
+	
+(2)
+&nbsp;&nbsp;
+<a href="http://www.chinaunix.net/talk/" target=_blank><font style="color:red;font-weight:normal">大话IT</font></a>
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251441&amp;goto=lastpost"><font color=#666666>07-25 19:10</font></a>
+<font color=#666666>by <a href="space-username-duke217.html">duke217</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/123.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 3922</font></td><td><font color=#666666>帖数: 73146</font></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<!--<td width="320px" valign="top" style="background-color: rgb(250, 251, 252);" class="altbg2" onmouseover="this.style.backgroundColor='#F0F3FA'" onmouseout="this.style.backgroundColor='#FAFBFC'"> -->
+<td width="320px"  valign="top" style="background-color: rgb(250, 251, 252);">
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:4px 0 ">
+<tr>
+<td rowspan="3" width="15%" class="index_icon"><a href="forum-97-1.html"><img src="http://cu.img168.net/static/image/common/tubiao/down.gif" align="left" alt="" /></a></td>
+<td class="bold subject" align="left" colspan=3>
+<a href="forum-97-1.html" >频道交流区</a> 
+	
+(0)
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr class="smalltxt">
+<td colspan="3" align="left"><font color=#666666>最后发表:
+<a href="forum.php?mod=redirect&amp;tid=4251358&amp;goto=lastpost"><font color=#666666>07-24 15:51</font></a>
+<font color=#666666>by <a href="space-username-blake326.html">blake326</a></font>
+</font></td></tr>
+<tr class="smalltxt"><td align="left">
+<a href=expand/rss/97.xml target=_blank><font color=#666666>RSS订阅</font></a>
+</td><td><font color=#666666>主题: 856</font></td><td><font color=#666666>帖数: 3381</font></td></tr>
+</table>
+</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr></tbody>
+</table>
+</div>		
+<!-- 首页板块循环结束 -->
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+<table cellspacing="0" style="border-collapse: collapse" bordercolor="" border="1" cellpadding="4" width="100%" align="center">		
+<tbody>
+  			<tr class="header">
+        		<td colspan="3" height="38" align=center style="font-weight: normal; color: #FFFFFF;border:1px solid #000">
+        			<img src="http://cu.img168.net/static/image/common//oldmod.gif" />&nbsp;&nbsp;感谢曾经的版主，因为你们的参与，而使论坛更强大!&nbsp;&nbsp;&nbsp;<a href="http://www.chinaunix.net/last_mo.html" target=_blank><u>查看历任版主</u></a>
+        		</td>
+    </tr>
+<tr>
+<td width="5%" align="center"  style="border:1px solid #000"><img src="http://cu.img168.net/static/image/common//online.gif"></td>
+<td colspan="2"  style="border:1px solid #000">
+<table cellspacing="0" cellpadding="0" border="0" width="98%" align="center" class="smalltxt">
+<tr>
+<td colspan="7" valign="middle">
+论坛共有 <span class="bold">17902986</span> 篇帖子(其中 <span class="bold">1476810</span> 篇主题) 今日发帖量为 <span class="bold">252</span> 篇&nbsp;&nbsp;  <br>
+最新注册的会员是 <a href="space-username-germin_huang.html" target="_blank" class="xi2">germin_huang</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+[ <font color=red>管理员</font> ] &nbsp; [ <font color=blue>版主</font> ] &nbsp; [ <font color=green>实习版主</font> ]
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="online" class="bm oll" style="margin-top:-1px">
+<div class="bm_h header">
+<span class="o"><a href="forum.php?showoldetails=yes#online" title="收起/展开"><img src="http://cu.img168.net/static/image/common//collapsed_yes.gif" alt="收起/展开" /></a></span>
+<h3>
+<strong><a href="home.php?mod=space&amp;do=friend&amp;view=online&amp;type=member">在线会员</a></strong>
+<span class="xs1">- 总计 <strong>5339</strong> 人在线
+- 最高记录是 <strong>11000</strong> 于 <strong>2012-05-03</strong>.</span>
+</h3>
+</div>
+</div>
+</div>
+<!--2011.12.16增加首页底部关键词推荐 -->
+<div style="border-collapse: separate !important;color: #000000;empty-cells: show;margin-bottom:5px;margin-top:5px; width:960px"><table width="100%" cellspacing="0" cellpadding="0" bgcolor="#000000" border="0" style="border:1px solid #000"><tbody><tr > <td bgcolor="#9898BA" style="border-bottom:1px solid #000;text-align:left; padding-left:10px; color:#fff; font-weight:bold;" height="30px;"> → CHINAUNIX热词专题 ← &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://bbs.chinaunix.net/linux/"  target="_blank" style="color:#fff">Linux专区</a> <a href="http://bbs.chinaunix.net/unix/" target="_blank" style="color:#fff">Unix专区</a> <a href="http://bbs.chinaunix.net/it/" target="_blank" style="color:#fff">IT专区</a></td></tr> <tr><td bgcolor="#FAFBFC" align="left" height="30px;"><a href='/unix/linuxxiatftpfuwuqi.shtml' target='_blank' title='Redhat Linux下tftp服务器'>Redhat Linux下tftp服务器</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='/linux/centosrpmshanchu.shtml' target='_blank' title='redhat/centos删除不需要的rpm包'>redhat/centos删除不需要的rpm包</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='/linux/wenjianxitong.shtml' target='_blank' title='嵌入式Linux之我行——内核、文件系统、应用移植开发篇'>嵌入式Linux之我行——内核、文件系统、应用移植开发篇</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='/linux/linux54.shtml' target='_blank' title='linux5.4 安装花屏'>linux5.4 安装花屏</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='/linux/linuxfangwenrizhi.shtml' target='_blank' title='[linux:访问日志分析]'>[linux:访问日志分析]</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></tbody></table></div> 
+</div>
+</div>
+
+<!--二维码-->
+<!--
+<style>
+*html{background:url(about:blank);background-attachment:fixed;}
+.fu0915{ height:363px;z-index:9999;width:130px; position:fixed; bottom:20px; left:35px; _position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); border:1px solid #c7c7c7; background:#fff;}
+.close0915{ height:20px; padding:6px 8px 0 0; overflow:hidden;}
+.close0915 span{ background:url(static/image/erweima/close0915.png) no-repeat; cursor:pointer; float:right; width:20px; height:20px;}
+.list0915{ width:130px; overflow:hidden; clear:both;}
+.list0915 li{ float:left; width:130px; height:154px; border-bottom:1px dashed #ccc;}
+.list0915 li.bornone0915{ border:0;}
+.list0915 li span{ display:block; text-align:center; font-size:12px; line-height:30px;}
+.list0915 li img{ display:block; margin:0 auto;}
+.box0915{ text-align:center; color:#03f;}
+.box0915 a{ color:#03f;}
+</style>
+--><!--<div class="fu0915" id="close0915">
+<div class="close0915"><span onclick="closebox()"> </span></div>
+<ul class="list0915">
+<li><span>ChinaUnix官方微信</span><img src="static/image/erweima/Chinaunix.jpg" width="113" height="113" alt="" /></li>
+<li class="bornone0915"><span>构架师技术大会</span><img src="static/image/erweima/sacc.jpg" width="113" height="113" alt="" /></li>
+</ul>
+<div class="box0915"><a href="http://bbs.chinaunix.net/thread-4188049-1-1.html">扫码送文库金币</a></div>
+</div>-->
+<script>
+    function closebox(){
+        document.getElementById("close0915").style.display="none";
+        setcookie("boxtime",1469455672,24*3600)
+    }
+</script>
+<!--二维码-->	</div>
+<div class="a_cn"style=""><p class="close" id="ad_corner_close" onclick="setcookie('adclose_46', 1, 86400);this.parentNode.style.display='none'"><a href="javascript:;"><img src="static/image/common/ad_close.gif" /></a></p><!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="description" content="" />
+<title> </title>
+</head>
+<body>
+<div style="border:1px #000 solid;width:270px;height:290px;background:#F1F1F1;">
+	<div style="height:30px;background:#f0f3fa;border-bottom:1px #000 solid;line-height:30px;padding:0px 10px;color:#000;"><strong>【创客168】第7期：大数据平台架构及应用</strong></div>
+  <div style="width:250px;margin:10px auto 0px;">
+	  <div style="color:#369;font-weight:bold;line-height:18px;font-size:12px;"><a href="https://jinshuju.net/f/ZcSf5b" style="color:#369;text-decoration:none;"></a></div>
+		<p style="font-size:12px;line-height:18px;height:200px;overflow:hidden;margin:8px 0px 0px;;padding:0;">本期活动我们将邀请多位来自大数据领域相关的架构师及技术专家，从社交的角度，从金融的角度来分享大数据平台架构及应用的经验与心得，为面临海量数据压力的企业级用户提供参考。
+<br>
+----------------------------------------
+<br>
+<br>
+<b>活动日期：</b>2016年8月13日13:00-－17:20
+
+<br>
+<br>
+<b>活动地点：</b>深圳
+</p>
+	<div style="border-top:1px #000 dashed;text-align:center;line-height:30px;"><a href="https://jinshuju.net/f/votJJX
+ " style="color:#369;text-decoration:none;font-size:12px;" target="_blank">报名入口&gt;&gt;</a></div>
+  </div>	
+</div>
+</body>
+
+</div>
+</body></div><script type="text/javascript">var cookieLogin = Ajax("TEXT");cookieLogin.get("connect.php?mod=check&op=cookie", function() {});</script><div style="width:960px; margin:0 auto; text-align:center; line-height:18px; padding:0 10px 10px 10px">
+<p>北京皓辰网域网络信息技术有限公司. 版权所有 京ICP证:060528号 北京市公安局海淀分局网监中心备案编号：1101082001<br/>	
+广播电视节目制作经营许可证(京) 字第1234号  中国互联网协会会员&nbsp;&nbsp;联系我们：<img width="139" height="12" border="0" src="static/image/common/adminmail.gif">
+<br >感谢所有关心和支持过ChinaUnix的朋友们    转载本站内容请注明原作者名及出处</p>
+</div>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="member.php?mod=clearcookies">清除 Cookies</a> - <a target="_blank" href="http://www.chinaunix.net">ChinaUnix</a>
+ 	- <a target="_blank" href="archiver/">Archiver</a> - <a target="_blank" href="/">WAP</a> - <a href="#top">TOP</a>
+</td>
+</tr>
+</table>
+
+<!--广告标签 -->
+<!--  <script type='text/javascript' src='http://168.it168.com/js/599.js'></script>-->
+<!-- <script type='text/javascript' src='http://168.it168.com/js/863.js'></script>-->
+<script>if(typeof(BLA)!='undefined'){BLA();}</script>
+<!--新版测试广告标签 -->
+<script type="text/javascript">
+var SeriesId='';
+var BrandId='';
+</script>
+<!-- <script type='text/javascript' src='http://168.it168.com/ajs/599.js'></script> -->
+<!-- <script type='text/javascript' src='http://168.it168.com/ajs/863.js'></script> -->
+
+    <!--//ITPUB 腾讯分析代码-->
+    &nbsp;&nbsp;<span id="tcss"></span><script type="text/javascript" src="http://tcss.qq.com/ping.js?v=19Oh" charset="utf-8"></script><script type="text/javascript" reload="1">pgvMain({"discuzParams":{"r2":"8399146","ui":0,"rt":"forum","pn":1},"virtualDomain":"bbs.chinaunix.net","extraParams":""});</script>            </script>
+    
+<div id="g_upmine_menu" class="tip tip_3" style="display:none;">
+<div class="tip_c">
+积分 0, 距离下一级还需  积分
+</div>
+<div class="tip_horn"></div>
+</div>
+<script src="home.php?mod=misc&ac=sendmail&rand=1469455672" type="text/javascript"></script>
+<!--回顶部js2011.12.30-->
+<script language="javascript">
+ lastScrollY=0;
+ function heartBeat(){
+ var diffY;
+ if (document.documentElement && document.documentElement.scrollTop)
+     diffY = document.documentElement.scrollTop;
+ else if (document.body)
+     diffY = document.body.scrollTop
+ else
+     {/*Netscape stuff*/}
+ percent=.1*(diffY-lastScrollY);
+ if(percent>0)percent=Math.ceil(percent);
+ else percent=Math.floor(percent);
+ document.getElementById("full").style.top=parseInt(document.getElementById("full").style.top)+percent+"px";
+ lastScrollY=lastScrollY+percent;
+ if(lastScrollY<200)
+ {
+ document.getElementById("full").style.display="none";
+ }
+ else
+ {
+ document.getElementById("full").style.display="block";
+ }
+ }
+ var gkuan=document.body.clientWidth;
+ var ks=(gkuan-960)/2-30;
+ suspendcode="<div id=\"full\" style='right:4px;POSITION:absolute;TOP:500px;z-index:100;width:20px; height:50px;cursor:pointer;'><a href=\"javascript:void(0)\" onclick=\"window.scrollTo(0,0);\"></a></div>"
+ document.write(suspendcode);
+ window.setInterval("heartBeat()",1);
+ </script>
+
+
+<!-- 统计 START -->
+<script src="http://stat.it168.com/pv.js" type="text/javascript" type="text/javascript"></script>
+<script type='text/javascript'>
+function sendPV(){
+    var pvTrack = new PvTrack();
+    pvTrack.type = 35; // 频道类别ID
+    pvTrack.channel = 22; // 频道ID
+    pvTrack.pageType = 0;
+    pvTrack.track();
+}
+window.setTimeout("sendPV()", 0);
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20237423-2']);
+  _gaq.push(['_setDomainName', '.chinaunix.net']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript"> 
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js?0ee5e8cdc4d43389b3d1bfd76e83216b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- 统计 END -->
+
+<!-- 临时加的广告统计 al -->
+<!--  临时加的广告统计 阿狸--></body>
+</html>

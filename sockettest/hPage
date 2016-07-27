@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+Accept: text/html, image/jpeg, image/png, vedio/x-mng, text/*, image/*, */*
+Accept-Lauguage: zh-CN,zh;q=0.8
+Accept-Encoding: x-gzip, x-deflate, gzip, deflat
+Accept-charset: utf-8, utf-8; q=0.5, *; q=0.5
+HOST: bbs.chinaunix.net
+Connection: Keep-Alive
+Cache-Control: no-cache
+
