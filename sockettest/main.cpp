@@ -1,10 +1,10 @@
 #include <iostream>
 #include <list>
+#include <map>
 #include <string>
 #include "urlManager.h"
-using namespace std;
 #include "socket.h"
-
+using namespace std;
 
 #define PTHREAD_NUM 30
 #define OPEN_MAX 2048
@@ -22,10 +22,13 @@ using namespace std;
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
+#include "getTime.h"
+#include "CreateDirectory.h"
 #define BUFSIZE 65535
 
 int epfd;
 int connectfd_ready;
+map<int,string> fd_path_map;
 pthread_t thread_tid[PTHREAD_NUM];
 pthread_attr_t attr;
 pthread_mutex_t connectfd_ready_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -66,6 +69,9 @@ void* thread_main(void* arg)
 			if (ret == -1);
 			//	return -1;
 		}
+
+
+
 		cout << rev_data <<endl;
 	}
 
@@ -75,7 +81,7 @@ void* thread_main(void* arg)
 int thread_make(int i)
 {
 	int ret;
-	ret = pthread_create(&thread_tid[i],&attr,thread_main,(void*)socket);
+	ret = pthread_create(&thread_tid[i],&attr,thread_main,NULL);
 	if(ret != 0)
 	{
 		p_err("pthread_create");
@@ -88,7 +94,7 @@ int main()
 	string str_url1("http://www.baidu.com");
 	string str_url2("http://www.qq.com");
 	string str_url3("http://www.163.com");
-	string str_url4("http://www.ifeng.com/");
+	string str_url4("http://www.ifeng.com");
 	string str_url5("https://www.taobao.com");
 	string str_url6("http://www.qunar.com/?ex_track=auto_4ef180cc");
 	string str_url7("http://cd.58.com/?utm_source=market&spm=b-31580022738699-pe-f-835.123duba_102");
@@ -127,7 +133,7 @@ int main()
 
 	Socket *socket = new Socket();
 	
-
+	string str_path;
 	for(int i = 0;i<7;i++)
 	{
 	    
@@ -144,6 +150,18 @@ int main()
 	    socket->bulidConnect(p_url,PORT);
 	    socket->setNonblocking(socket->m_socket_handle);
         socket->request(socket->m_socket_handle,p_url); 
+        str_path="/home/denny/download/";
+        str_path.append(p_url->siteName);
+        str_path.append("/");
+        if(CreateDirectory(str_path.c_str()) == -1)
+        	cout<<"CreateDirectory err"<<endl;
+
+        char* str_time = getTime();
+        str_path.append(str_time);
+        free(str_time);
+        cout<<str_path<<endl;
+        fd_path_map.insert(pair<int,string>(socket->m_socket_handle,str_path));
+        
         tmp_event.events = EPOLLIN | EPOLLET;
 		tmp_event.data.fd = socket->m_socket_handle;
 		ret = epoll_ctl(epfd,EPOLL_CTL_ADD,socket->m_socket_handle,&tmp_event);	
@@ -157,7 +175,7 @@ int main()
         cout <<"++++++++++++++++++++++++++++++++++"<<endl;*/
 	}
 	int readyNum = 0;
-	while(1)
+	while(0)
 	{
 		readyNum = epoll_wait(epfd,ready_event,OPEN_MAX,-1);/* 阻塞*/
 		if(readyNum == -1)

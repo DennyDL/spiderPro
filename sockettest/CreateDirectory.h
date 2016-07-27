@@ -1,0 +1,1 @@
+int CreateDirectory(const char *);

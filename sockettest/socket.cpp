@@ -86,33 +86,7 @@ int Socket::request(int fd, StructUrl* url)
 
 }
 
-int Socket::responce(int fd,char* rev_data,int epfd)
-{
-	
-	rev_data = (char*)malloc(BUFSIZE);
-	memset(rev_data,0,BUFSIZE);
-	
-   	int n = 0,nread;
-	while ((nread = read(fd, rev_data + n, BUFSIZ-1)) > 0) {
-	    n += nread;
-	}
-	if (nread == -1 && errno != EAGAIN) {
-	    perror("read error");
-	    int ret = epoll_ctl(epfd, EPOLL_CTL_DEL,fd,NULL);
-		if (ret == -1)
-			return -1;
-	}
 
-    
-    
-	return 0;
-}
-
-
-/*void* Socket::getData()
-{
-	return this->m_buf;
-}*/
 
 int Socket::setNonblocking(int fd)
 {
