@@ -15,11 +15,12 @@ Downloader::~Downloader()
 }
 
 
-void Downloader::httpQuest(StructUrl *p_url)
+int Downloader::httpQuest(StructUrl *p_url)
 {
 	m_socket->bulidConnect(p_url,PORT);
 	m_socket->setNonblocking(m_socket->m_socket_handle);
     m_socket->request(m_socket->m_socket_handle,p_url);
+    return m_socket->m_socket_handle;
 }
 
 void Downloader::httpRespose(int connectfd,char *rev_data,int length)

@@ -68,51 +68,51 @@ void* thread_main(void* arg)
 		//if(itor != fd_path_map.end())
 		//char* path = (itor->second).c_str();
 		download->httpRespose(connectfd,rev_data,BUFSIZE);
+		
+		map<int,string>::iterator itor = fd_path_map.find(connectfd);
+		if(itor != fd_path_map.end())
 		{
-			map<int,string>::iterator itor = fd_path_map.find(connectfd);
-			if(itor != fd_path_map.end())
-			{
-				for(;;)
-			    {
-			        //创建一个文件mPage用于保存网页的主要信息
-			    	int cofd;
-			        if(-1 == (cofd = open((itor->second).c_str(),O_RDWR|O_CREAT|O_APPEND,0766)))
-			        {
-			                perror("open or create Page fialed!\n");
-			                exit(1);
-			        }
+			while(1)
+		    {
+		        //创建一个文件mPage用于保存网页的主要信息
+		    	int cofd;
+		        if(-1 == (cofd = open((itor->second).c_str(),O_RDWR|O_CREAT|O_APPEND,0766)))
+		        {
+		                perror("open or create Page fialed!\n");
+		                exit(1);
+		        }
 
 
-			        //将网页的主要内容(text)写入mPage中
-			        int cf;
-			        if(-1 == (cf = write(cofd,rev_data,strlen(rev_data))))
-			        {
-			                perror("Page写入主页信息失败!\n");
-			                break;
-			        }
-			        else if(cf == 0)
-			        {
-			                printf("Page写入主页信息字节数为0!\n");
-			                break;
+		        //将网页的主要内容(text)写入mPage中
+		        int cf;
+		        if(-1 == (cf = write(cofd,rev_data,strlen(rev_data))))
+		        {
+		                perror("Page写入主页信息失败!\n");
+		                break;
+		        }
+		        else if(cf == 0)
+		        {
+		                printf("Page写入主页信息字节数为0!\n");
+		                break;
 
-			        }
-			        else
-			        {
-			                printf("Page写入了主页信息:%d字节\n",cf);
-			                break;
-			        }
+		        }
+		        else
+		        {
+		                printf("Page写入了主页信息:%d字节\n",cf);
+		                break;
+		        }
 
 
-			        //将text清空,方便接受其他网页信息
-			        memset(rev_data,0,BUFSIZE);
+		        //将text清空,方便接受其他网页信息
+		        memset(rev_data,0,BUFSIZE);
 
-			        //关闭文件描述符
-			        //close(chfd);
-			        close(cofd);
-			    }
-			}
-	
+		        //关闭文件描述符
+		        //close(chfd);
+		        close(cofd);
+		    }
 		}
+	
+		
 		//cout << rev_data <<endl;
 	}
 
@@ -172,15 +172,14 @@ int main()
 	StructUrl *p_url = NULL;
 
 
-	Socket *socket = new Socket();
+	
 	
 	string str_path;
 	for(int i = 0;i<7;i++)
 	{
         p_url = url_manager->getUrlFromQuque();
-	    socket->bulidConnect(p_url,PORT);
-	    socket->setNonblocking(socket->m_socket_handle);
-        socket->request(socket->m_socket_handle,p_url); 
+	    int sockfd = download->httpQuest(p_url);
+
         str_path="/home/denny/download/";
         str_path.append(p_url->siteName);
         str_path.append("/");
@@ -190,12 +189,12 @@ int main()
         char* str_time = getTime();
         str_path.append(str_time);
         free(str_time);
-        cout<<"fd:"<<socket->m_socket_handle<<"path"<<str_path<<endl;
-        fd_path_map.insert(pair<int,string>(socket->m_socket_handle,str_path));
+        cout<<"fd:"<<sockfd<<"path"<<str_path<<endl;
+        fd_path_map.insert(pair<int,string>(sockfd,str_path));
         
         tmp_event.events = EPOLLIN | EPOLLET;
-		tmp_event.data.fd = socket->m_socket_handle;
-		ret = epoll_ctl(epfd,EPOLL_CTL_ADD,socket->m_socket_handle,&tmp_event);	
+		tmp_event.data.fd = sockfd;
+		ret = epoll_ctl(epfd,EPOLL_CTL_ADD,sockfd,&tmp_event);	
 		if(ret == -1)
 			p_err("epoll_ctl0");
 	}
@@ -208,7 +207,7 @@ int main()
 
 		for(int i = 0;i < readyNum;i++)
 		{
-			if(!(ready_event[i].events & EPOLLIN))
+			if(!(ready_event[i].events &EPOLLIN))
 				continue;
 			sleep(1);
 			pthread_mutex_lock(&connectfd_ready_mutex);
@@ -218,8 +217,6 @@ int main()
 		}
 
 	}
-	
-	
 
 	return 0;
 }

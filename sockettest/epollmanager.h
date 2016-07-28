@@ -17,7 +17,7 @@ public:
 private:
 	void p_err(char* errStr);
 public:
-	struct epoll_event tmp_event, ready_event[OPEN_MAX];
+	struct epoll_event tmp_event,ready_event[OPEN_MAX];
 private:
 	int m_epoll_handle;
 	int m_task_num;//抓取的最大任务数

@@ -12,7 +12,7 @@ class Downloader
 public:
 	Downloader();
 	~Downloader();
-	void httpQuest(StructUrl *p_url);
+	int httpQuest(StructUrl *p_url);
 	void httpRespose(int connectfd,char *rev_data/*out*/,int length);
 private:
 	Socket *m_socket;
