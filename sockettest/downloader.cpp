@@ -6,7 +6,6 @@
 Downloader::Downloader()
 {
 	this->m_socket = new Socket();
-	this->m_epoll_manager = new EpollManager(40);
 }
 
 Downloader::~Downloader()
@@ -31,7 +30,6 @@ void Downloader::httpRespose(int connectfd,char *rev_data,int length)
 	}
 	if (nread == -1 && errno != EAGAIN) 
 	{
-	    perror("read error");
-	    m_epoll_manager->unregisHandle(connectfd);   
+	    perror("read error");   
 	}
 }

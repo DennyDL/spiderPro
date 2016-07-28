@@ -2,7 +2,6 @@
 #define _DOWNLOADER_H_
 #include <string>
 #include "socket.h"
-#include "epollmanager.h"
 
 
 using namespace std;
@@ -16,7 +15,6 @@ public:
 	void httpRespose(int connectfd,char *rev_data/*out*/,int length);
 private:
 	Socket *m_socket;
-	EpollManager *m_epoll_manager;
 
 };
 #endif

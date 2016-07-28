@@ -12,24 +12,19 @@ using namespace std;
 #define OPEN_MAX 2048
 #include <stdio.h>
 #include <sys/types.h>          /* See NOTES */
-#include <sys/socket.h>
 #include <errno.h>
 #include <arpa/inet.h>
-#include <unistd.h>
+#include <stdlib.h>
 #include <ctype.h>
-#include <stdlib.h>
-#include <strings.h>
-#include <sys/time.h>
-#include <sys/epoll.h>
+#include <unistd.h>
 #include <pthread.h>
-#include <stdlib.h>
 #include <string.h>
-#include <fcntl.h>
+
 #include "getTime.h"
 #include "CreateDirectory.h"
+#include "dso.h"
 #define BUFSIZE 65535
 
-int epfd;
 int connectfd_ready;
 map<int,string> fd_path_map;
 pthread_t thread_tid[PTHREAD_NUM];
@@ -39,6 +34,8 @@ pthread_cond_t connectfd_ready_cond = PTHREAD_COND_INITIALIZER;
 
 Downloader *download = new Downloader();
 EpollManager* epollmanager = new EpollManager(50);
+DsoManager *dso_manager = new DsoManager();
+
 
 void p_err(char* errStr)
 {
@@ -49,6 +46,7 @@ void* thread_main(void* arg)
 {
 	int connectfd;
 	//char rev_data[BUFSIZE];
+	HandleData handle_data;
 	char* rev_data = (char*)malloc(BUFSIZE);
 	memset(rev_data,0,BUFSIZE);
 	while(1)
@@ -74,44 +72,11 @@ void* thread_main(void* arg)
 		map<int,string>::iterator itor = fd_path_map.find(connectfd);
 		if(itor != fd_path_map.end())
 		{
-			while(1)
-		    {
-		        //创建一个文件mPage用于保存网页的主要信息
-		    	int cofd;
-		        if(-1 == (cofd = open((itor->second).c_str(),O_RDWR|O_CREAT|O_APPEND,0766)))
-		        {
-		                perror("open or create Page fialed!\n");
-		                exit(1);
-		        }
-
-
-		        //将网页的主要内容(text)写入mPage中
-		        int cf;
-		        if(-1 == (cf = write(cofd,rev_data,strlen(rev_data))))
-		        {
-		                perror("Page写入主页信息失败!\n");
-		                break;
-		        }
-		        else if(cf == 0)
-		        {
-		                printf("Page写入主页信息字节数为0!\n");
-		                break;
-
-		        }
-		        else
-		        {
-		                printf("Page写入了主页信息:%d字节\n",cf);
-		                break;
-		        }
-
-
-		        //将text清空,方便接受其他网页信息
-		        memset(rev_data,0,BUFSIZE);
-
-		        //关闭文件描述符
-		        //close(chfd);
-		        close(cofd);
-		    }
+			handle_data.data = rev_data;
+			handle_data.path = (itor->second).c_str();
+			Module* module = dso_manager->getModule("savehtml");
+			if(module != NULL)
+    			module->handle((void *)&handle_data);
 		}
 	
 		
@@ -146,7 +111,10 @@ int main()
 	str_urls.push_back(str_url6);
 	str_urls.push_back(str_url7);
 	
-	struct epoll_event tmp_event,ready_event[OPEN_MAX];
+	if(dso_manager->load("./","savehtml"))
+    	cout << "load success !"<<endl;
+    
+
 	int ret = pthread_attr_init(&attr);
 	if(ret != 0)
 		p_err("pthread_attr_init");
@@ -170,9 +138,6 @@ int main()
 	url_manager->addUrlList(str_urls);
 	StructUrl *p_url = NULL;
 
-
-	
-	
 	string str_path;
 	for(int i = 0;i<7;i++)
 	{
