@@ -5,6 +5,7 @@
 #include "urlManager.h"
 #include "socket.h"
 #include "downloader.h"
+#include "epollmanager.h"
 using namespace std;
 
 #define PTHREAD_NUM 30
@@ -37,6 +38,7 @@ pthread_mutex_t connectfd_ready_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t connectfd_ready_cond = PTHREAD_COND_INITIALIZER;
 
 Downloader *download = new Downloader();
+EpollManager* epollmanager = new EpollManager(50);
 
 void p_err(char* errStr)
 {
@@ -159,9 +161,6 @@ int main()
 		printf("create thread id is :%d\n",tmp_tid);
 	}
 
-	epfd = epoll_create(OPEN_MAX);
-	if(epfd == -1)
-		p_err("epoll_create");
 
 	UrlManager *url_manager = new UrlManager();
 	url_manager->addUrl(str_url1);
@@ -192,26 +191,22 @@ int main()
         cout<<"fd:"<<sockfd<<"path"<<str_path<<endl;
         fd_path_map.insert(pair<int,string>(sockfd,str_path));
         
-        tmp_event.events = EPOLLIN | EPOLLET;
-		tmp_event.data.fd = sockfd;
-		ret = epoll_ctl(epfd,EPOLL_CTL_ADD,sockfd,&tmp_event);	
-		if(ret == -1)
-			p_err("epoll_ctl0");
+        epollmanager->regisHandle(sockfd);
 	}
 	int readyNum = 0;
 	while(1)
 	{
-		readyNum = epoll_wait(epfd,ready_event,OPEN_MAX,-1);/* 阻塞*/
+		readyNum = epollmanager->wait();/* 阻塞*/
 		if(readyNum == -1)
 			p_err("epoll_wait");
 
 		for(int i = 0;i < readyNum;i++)
 		{
-			if(!(ready_event[i].events &EPOLLIN))
+			if(!(epollmanager->ready_event[i].events &EPOLLIN))
 				continue;
 			sleep(1);
 			pthread_mutex_lock(&connectfd_ready_mutex);
-			connectfd_ready = ready_event[i].data.fd;
+			connectfd_ready = epollmanager->ready_event[i].data.fd;
 			pthread_cond_signal(&connectfd_ready_cond);
 			pthread_mutex_unlock(&connectfd_ready_mutex);
 		}

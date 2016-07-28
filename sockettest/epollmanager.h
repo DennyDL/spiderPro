@@ -12,15 +12,15 @@ public:
 	//注册socket句柄
 	void regisHandle(int handle);
 	void unregisHandle(int handle);
-	void wait();
+	int wait();
 	/* data */
 private:
 	void p_err(char* errStr);
 public:
 	struct epoll_event tmp_event,ready_event[OPEN_MAX];
+	int m_task_num;//抓取的最大任务数
 private:
 	int m_epoll_handle;
-	int m_task_num;//抓取的最大任务数
 };
 
 #endif

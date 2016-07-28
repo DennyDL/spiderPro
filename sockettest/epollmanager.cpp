@@ -53,9 +53,11 @@ void EpollManager::unregisHandle(int handle)
 		p_err("EPOLL_CTL_DEL");
 }
 
-void EpollManager::wait()
+int EpollManager::wait()
 {
 	int ret = epoll_wait(m_epoll_handle,ready_event,OPEN_MAX,-1);
 	if(ret == -1)
 		p_err("epoll_wait");
+	else
+		return ret;
 }
