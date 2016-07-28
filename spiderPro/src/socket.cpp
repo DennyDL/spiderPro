@@ -133,8 +133,20 @@ void* Socket::getData()
 	return this->m_buf;
 }
 
-int Socket::setSockket(int fd)
+int Socket::setNonblocking(int fd)
 {
+	int opts;
+
+    opts = fcntl(fd, F_GETFL);
+    if(opts < 0) {
+        perror("fcntl(F_GETFL)\n");
+        exit(1);
+    }
+    opts = (opts | O_NONBLOCK);
+    if(fcntl(fd, F_SETFL, opts) < 0) {
+        perror("fcntl(F_SETFL)\n");
+        exit(1);
+    }
 	return 0;
 }
 

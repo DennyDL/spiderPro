@@ -11,7 +11,8 @@ public:
 	int regisHandle(int handle);
 	int unregisHandle(int handle);
 	/* data */
-
+public:
+	struct epoll_event ev, events[MAX_EVENTS];
 private:
 	int m_epoll_handle;
 	int m_task_num;//抓取的最大任务数

@@ -2,6 +2,7 @@
 #include "spider.h"
 #include "confparser.h"
 #include "dso.h"
+#include "socket.h"
 ConfigParser* ConfigParser::__self = NULL;//放在confparser.h会出现重复定义，注意，static是在编译阶段就分配内存
 SpiderProgramScheduler::SpiderProgramScheduler()
 {
@@ -66,8 +67,24 @@ int SpiderProgramScheduler::init(int argc,char* argv[])
 
 int SpiderProgramScheduler::run()
 {
+	
 	//等待相关管理类的实现
+	//4.1、将URL种子交给URL管理器。
+	ConfigParser* cp = ConfigParser::instance();
+	char *seed = cp->getUrlSeed();
+	UrlManager *url_manager = new UrlManager();
+	url_manager->addUrl(seed);
+	StructUrl *p_url = NULL;
+	p_url = url_manager->getUrlFromQuque();
+	Socket *socket = new Socket();
+	socket->bulidConnect(p_url,PORT);
+	socket->setNonblocking(socket->m_socket_handle);
+	socket->request(socket->m_socket_handle,p_url);
 
+
+
+	socket->responce(socket->m_socket_handle);
+	socket->disConnect(socket->m_socket_handle);
 }
 
 int SpiderProgramScheduler::daemon()
