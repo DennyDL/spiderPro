@@ -1,4 +1,6 @@
-#include <epoll.h>
+#ifndef _EPOLLMANAGER_H_
+#define _EPOLLMANAGER_H_
+#include <sys/epoll.h>
 #define OPEN_MAX 2048 
 
 class EpollManager
@@ -20,3 +22,5 @@ private:
 	int m_epoll_handle;
 	int m_task_num;//抓取的最大任务数
 };
+
+#endif

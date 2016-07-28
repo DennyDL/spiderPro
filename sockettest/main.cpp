@@ -4,6 +4,7 @@
 #include <string>
 #include "urlManager.h"
 #include "socket.h"
+#include "downloader.h"
 using namespace std;
 
 #define PTHREAD_NUM 30
@@ -35,6 +36,8 @@ pthread_attr_t attr;
 pthread_mutex_t connectfd_ready_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t connectfd_ready_cond = PTHREAD_COND_INITIALIZER;
 
+Downloader *download = new Downloader();
+
 void p_err(char* errStr)
 {
 	perror(errStr);
@@ -64,19 +67,7 @@ void* thread_main(void* arg)
 		
 		//if(itor != fd_path_map.end())
 		//char* path = (itor->second).c_str();
-		
-		int n = 0,nread;
-		while ((nread = read(connectfd, rev_data + n, BUFSIZ-1)) > 0) {
-		    n += nread;
-		}
-		if (nread == -1 && errno != EAGAIN) {
-		    perror("read error");
-		    int ret = epoll_ctl(epfd, EPOLL_CTL_DEL,connectfd,NULL);
-		    fd_path_map.erase(connectfd);
-			if (ret == -1);
-			//	return -1;
-		}
-		else
+		download->httpRespose(connectfd,rev_data,BUFSIZE);
 		{
 			map<int,string>::iterator itor = fd_path_map.find(connectfd);
 			if(itor != fd_path_map.end())

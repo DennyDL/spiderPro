@@ -1,4 +1,6 @@
 #include "epollmanager.h"
+#include <stdlib.h>
+#include <stdio.h>
 /*
 class EpollManager
 {

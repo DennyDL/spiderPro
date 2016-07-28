@@ -1,3 +1,5 @@
+#ifndef _SOCKET_H_
+#define _SOCKET_H_
 #include <string>
 #include "url.h"
 #define PORT 80
@@ -22,3 +24,4 @@ private:
 	const char* m_get;
 };
 
+#endif

@@ -1,29 +1,12 @@
-/*
-#include <string>
-#include "socket.h"
-#include "epollmanager.h"
-
-
-using namespace std;
-
-class Downloader
-{
-public:
-	Downloader();
-	~Downloader();
-	httpQuest(StructUrl *p_url);
-	httpRespose();
-private:
-	Socket m_socket;
-	EpollManager m_epoll_manager;
-
-};
-*/
+#include "downloader.h"
+#include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
 
 Downloader::Downloader()
 {
-	m_socket = new Socket();
-	m_epoll_manager = new EpollManager();
+	this->m_socket = new Socket();
+	this->m_epoll_manager = new EpollManager(40);
 }
 
 Downloader::~Downloader()
@@ -32,17 +15,17 @@ Downloader::~Downloader()
 }
 
 
-int Downloader::httpQuest(StructUrl *p_url)
+void Downloader::httpQuest(StructUrl *p_url)
 {
 	m_socket->bulidConnect(p_url,PORT);
 	m_socket->setNonblocking(m_socket->m_socket_handle);
     m_socket->request(m_socket->m_socket_handle,p_url);
 }
 
-int Downloader::httpRespose(int connectfd,char *rev_data)
+void Downloader::httpRespose(int connectfd,char *rev_data,int length)
 {
 	int n = 0,nread;
-	while ((nread = read(connectfd, rev_data + n, BUFSIZ-1)) > 0) {
+	while ((nread = read(connectfd, rev_data + n, length-1)) > 0) {
 	    n += nread;
 	}
 	if (nread == -1 && errno != EAGAIN) 
