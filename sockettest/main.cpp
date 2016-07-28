@@ -22,6 +22,7 @@ using namespace std;
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
 #include "getTime.h"
 #include "CreateDirectory.h"
 #define BUFSIZE 65535
@@ -42,8 +43,8 @@ void p_err(char* errStr)
 void* thread_main(void* arg)
 {
 	int connectfd;
-	char* rev_data;
-	rev_data = (char*)malloc(BUFSIZE);
+	//char rev_data[BUFSIZE];
+	char* rev_data = (char*)malloc(BUFSIZE);
 	memset(rev_data,0,BUFSIZE);
 	while(1)
 	{
@@ -59,6 +60,11 @@ void* thread_main(void* arg)
 			EINVAL：一个或者多个参数无效
 			EIO：读写出错
 			EISDIR：参数fd索引的时目录*/
+		 
+		
+		//if(itor != fd_path_map.end())
+		//char* path = (itor->second).c_str();
+		
 		int n = 0,nread;
 		while ((nread = read(connectfd, rev_data + n, BUFSIZ-1)) > 0) {
 		    n += nread;
@@ -66,13 +72,57 @@ void* thread_main(void* arg)
 		if (nread == -1 && errno != EAGAIN) {
 		    perror("read error");
 		    int ret = epoll_ctl(epfd, EPOLL_CTL_DEL,connectfd,NULL);
+		    fd_path_map.erase(connectfd);
 			if (ret == -1);
 			//	return -1;
 		}
+		else
+		{
+			map<int,string>::iterator itor = fd_path_map.find(connectfd);
+			if(itor != fd_path_map.end())
+			{
+				for(;;)
+			    {
+			        //创建一个文件mPage用于保存网页的主要信息
+			    	int cofd;
+			        if(-1 == (cofd = open((itor->second).c_str(),O_RDWR|O_CREAT|O_APPEND,0766)))
+			        {
+			                perror("open or create Page fialed!\n");
+			                exit(1);
+			        }
 
 
+			        //将网页的主要内容(text)写入mPage中
+			        int cf;
+			        if(-1 == (cf = write(cofd,rev_data,strlen(rev_data))))
+			        {
+			                perror("Page写入主页信息失败!\n");
+			                break;
+			        }
+			        else if(cf == 0)
+			        {
+			                printf("Page写入主页信息字节数为0!\n");
+			                break;
 
-		cout << rev_data <<endl;
+			        }
+			        else
+			        {
+			                printf("Page写入了主页信息:%d字节\n",cf);
+			                break;
+			        }
+
+
+			        //将text清空,方便接受其他网页信息
+			        memset(rev_data,0,BUFSIZE);
+
+			        //关闭文件描述符
+			        //close(chfd);
+			        close(cofd);
+			    }
+			}
+	
+		}
+		//cout << rev_data <<endl;
 	}
 
 //	close(connectfd);
@@ -93,11 +143,11 @@ int main()
 {
 	string str_url1("http://www.baidu.com");
 	string str_url2("http://www.qq.com");
-	string str_url3("http://www.163.com");
+	string str_url3("http://blog.csdn.net/yusiguyuan/article/details/21478577");
 	string str_url4("http://www.ifeng.com");
-	string str_url5("https://www.taobao.com");
-	string str_url6("http://www.qunar.com/?ex_track=auto_4ef180cc");
-	string str_url7("http://cd.58.com/?utm_source=market&spm=b-31580022738699-pe-f-835.123duba_102");
+	string str_url5("http://www.xinhuanet.com");
+	string str_url6("http://www.sina.com.cn");
+	string str_url7("http://bbs.csdn.net");
 	list<string> str_urls;
 	str_urls.push_back(str_url5);
 	str_urls.push_back(str_url6);
@@ -136,16 +186,6 @@ int main()
 	string str_path;
 	for(int i = 0;i<7;i++)
 	{
-	    
- /*     cout<< "url:" <<p_url->url<<endl;
-        cout<< "state:"<<p_url->state<<endl;
-        cout<< "depth:"<<p_url->depth<<endl;
-        cout<< "protocal:"<<p_url->protocal<<endl;
-        cout<< "siteName:"<<p_url->siteName<<endl;
-        cout<< "get:"<<p_url->get<<endl;
-        cout<< "fileType:"<<p_url->fileType<<endl;
-        cout<< "fileName:"<<p_url->fileName<<endl;
-        cout<< "path:"<<p_url->path<<endl;*/
         p_url = url_manager->getUrlFromQuque();
 	    socket->bulidConnect(p_url,PORT);
 	    socket->setNonblocking(socket->m_socket_handle);
@@ -159,7 +199,7 @@ int main()
         char* str_time = getTime();
         str_path.append(str_time);
         free(str_time);
-        cout<<str_path<<endl;
+        cout<<"fd:"<<socket->m_socket_handle<<"path"<<str_path<<endl;
         fd_path_map.insert(pair<int,string>(socket->m_socket_handle,str_path));
         
         tmp_event.events = EPOLLIN | EPOLLET;
@@ -167,15 +207,9 @@ int main()
 		ret = epoll_ctl(epfd,EPOLL_CTL_ADD,socket->m_socket_handle,&tmp_event);	
 		if(ret == -1)
 			p_err("epoll_ctl0");
-
-
- /*     socket->request(socket->m_socket_handle,p_url);  
- 		socket->responce(socket->m_socket_handle);
-        socket->disConnect(socket->m_socket_handle);
-        cout <<"++++++++++++++++++++++++++++++++++"<<endl;*/
 	}
 	int readyNum = 0;
-	while(0)
+	while(1)
 	{
 		readyNum = epoll_wait(epfd,ready_event,OPEN_MAX,-1);/* 阻塞*/
 		if(readyNum == -1)
@@ -185,7 +219,7 @@ int main()
 		{
 			if(!(ready_event[i].events & EPOLLIN))
 				continue;
-			
+			sleep(1);
 			pthread_mutex_lock(&connectfd_ready_mutex);
 			connectfd_ready = ready_event[i].data.fd;
 			pthread_cond_signal(&connectfd_ready_cond);
