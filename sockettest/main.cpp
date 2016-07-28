@@ -6,6 +6,7 @@
 #include "socket.h"
 #include "downloader.h"
 #include "epollmanager.h"
+#include "dso.h"
 using namespace std;
 
 #define PTHREAD_NUM 30
@@ -22,7 +23,7 @@ using namespace std;
 
 #include "getTime.h"
 #include "CreateDirectory.h"
-#include "dso.h"
+
 #define BUFSIZE 65535
 
 int connectfd_ready;
