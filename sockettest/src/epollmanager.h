@@ -21,6 +21,7 @@ public:
 	int m_task_num;//抓取的最大任务数
 private:
 	int m_epoll_handle;
+	
 };
 
 #endif

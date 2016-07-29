@@ -7,6 +7,10 @@
 #include "downloader.h"
 #include "epollmanager.h"
 #include "dso.h"
+#include "confparser.h"//在confparser.cpp也包含了confparser.h，所以注意不要重复定义
+
+#define CONF_PATH "../spider.conf"
+ConfigParser* ConfigParser::__self = NULL;//放在confparser.h会出现重复定义，注意，static是在编译阶段就分配内存
 using namespace std;
 
 #define PTHREAD_NUM 30
@@ -36,16 +40,52 @@ pthread_cond_t connectfd_ready_cond = PTHREAD_COND_INITIALIZER;
 Downloader *download = new Downloader();
 EpollManager* epollmanager = new EpollManager(50);
 DsoManager *dso_manager = new DsoManager();
-
+ConfigParser* cp = ConfigParser::instance();
+UrlManager *url_manager = new UrlManager();
 
 void p_err(char* errStr)
 {
 	perror(errStr);
 	exit(1);
 }
+
+void* getUrlFromQuque(void* arg)
+{
+	string str_path;
+	StructUrl *p_url = NULL;
+	while(1)
+	{
+        if(!(url_manager->m_url_quque).empty())
+        {
+        	p_url = url_manager->getUrlFromQuque();
+		    int sockfd = download->httpQuest(p_url);
+
+	        str_path="/home/denny/download/";
+	        str_path.append(p_url->siteName);
+	        str_path.append("/");
+	        if(CreateDirectory(str_path.c_str()) == -1)
+	        	cout<<"CreateDirectory err"<<endl;
+
+	        char* str_time = getTime();
+	        str_path.append(str_time);
+	        free(str_time);
+	        cout<<"fd:"<<sockfd<<"path"<<str_path<<endl;
+	        fd_path_map.insert(pair<int,string>(sockfd,str_path));
+	        
+	        epollmanager->regisHandle(sockfd);
+        }
+        else
+        {
+        	sleep(0.5);
+        }
+        
+	}
+}
+
 void* thread_main(void* arg)
 {
 	int connectfd;
+	int page_num = -1;
 	//char rev_data[BUFSIZE];
 	HandleData handle_data;
 	char* rev_data = (char*)malloc(BUFSIZE);
@@ -64,9 +104,15 @@ void* thread_main(void* arg)
 		{
 			handle_data.data = rev_data;
 			handle_data.path = (itor->second).c_str();
+
 			Module* module = dso_manager->getModule("savehtml");
 			if(module != NULL)
-    			module->handle((void *)&handle_data);
+    			page_num = module->handle((void *)&handle_data);
+    		if(page_num == 0)
+    		{
+    			epollmanager->unregisHandle(connectfd);
+    			fd_path_map.erase(connectfd);
+    		}
 		}
 	
 		
@@ -89,21 +135,17 @@ int thread_make(int i)
 
 int main()
 {
-	string str_url1("http://www.baidu.com");
-	string str_url2("http://www.qq.com");
-	string str_url3("http://blog.csdn.net/yusiguyuan/article/details/21478577");
-	string str_url4("http://www.ifeng.com");
-	string str_url5("http://www.xinhuanet.com");
-	string str_url6("http://www.sina.com.cn");
-	string str_url7("http://bbs.csdn.net");
-	list<string> str_urls;
-	str_urls.push_back(str_url5);
-	str_urls.push_back(str_url6);
-	str_urls.push_back(str_url7);
-	
-	if(dso_manager->load("./","savehtml"))
+	cp->loader(CONF_PATH);
+	list<string> module_name = cp->getModuleNames();
+	list<string>::iterator itor_list = module_name.begin();
+	while(itor_list!=module_name.end())
+    {
+	  if(dso_manager->load(cp->getModulePath(),(*itor_list).c_str()))
     	cout << "load success !"<<endl;
-    
+	  itor_list++;
+    }
+     
+	url_manager->addUrl(cp->getUrlSeed());
 
 	int ret = pthread_attr_init(&attr);
 	if(ret != 0)
@@ -119,35 +161,15 @@ int main()
 		printf("create thread id is :%d\n",tmp_tid);
 	}
 
-
-	UrlManager *url_manager = new UrlManager();
-	url_manager->addUrl(str_url1);
-	url_manager->addUrl(str_url2);
-	url_manager->addUrl(str_url3);
-	url_manager->addUrl(str_url4);
-	url_manager->addUrlList(str_urls);
-	StructUrl *p_url = NULL;
-
-	string str_path;
-	for(int i = 0;i<7;i++)
+	
+	
+	pthread_t get_url_thread_tid;
+	ret = pthread_create(&get_url_thread_tid,&attr,getUrlFromQuque,NULL);
+	if(ret != 0)
 	{
-        p_url = url_manager->getUrlFromQuque();
-	    int sockfd = download->httpQuest(p_url);
-
-        str_path="/home/denny/download/";
-        str_path.append(p_url->siteName);
-        str_path.append("/");
-        if(CreateDirectory(str_path.c_str()) == -1)
-        	cout<<"CreateDirectory err"<<endl;
-
-        char* str_time = getTime();
-        str_path.append(str_time);
-        free(str_time);
-        cout<<"fd:"<<sockfd<<"path"<<str_path<<endl;
-        fd_path_map.insert(pair<int,string>(sockfd,str_path));
-        
-        epollmanager->regisHandle(sockfd);
+		p_err("pthread_create");
 	}
+	printf("create get_url_thread_tid is :%d\n",get_url_thread_tid);
 	int readyNum = 0;
 	while(1)
 	{

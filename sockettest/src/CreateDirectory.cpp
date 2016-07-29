@@ -27,7 +27,7 @@ int CreateDirectory(const char *sPathName )
                 }      
             }    
             DirName[i] = '/';      
-         }      
+        }      
   }        
   return 0;      
 }   

@@ -18,9 +18,11 @@ public:
 private: //内部接口
 	bool findUrl(string url_str);				//该URL是否已经在
 
+public:
+	queue<StructUrl*>  m_url_quque;   					//维护等待抓取的URL
 private:
 
 	map <string, StructUrl*> m_url_map;  				//string 是url字符串，map会用哈希算法计算出hashcode，建立所有URL的索引
-	queue<StructUrl*>  m_url_quque;   					//维护等待抓取的URL
+	
 
 };

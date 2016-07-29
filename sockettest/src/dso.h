@@ -31,7 +31,7 @@ struct HandleData
 class DsoManager
 {
 public:
-	int load(char* path,char* name);
+	int load(char* path,const char* name);
 	Module* getModule(char* name);
 //	DsoManager();
 //	~DsoManager();

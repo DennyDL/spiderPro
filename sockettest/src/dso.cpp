@@ -1,7 +1,7 @@
 #include "dso.h"
 #include "qstring.h"
 #include <dlfcn.h>
-int DsoManager::load(char* path,char*name)
+int DsoManager::load(char* path,const char*name)
 {
 	Module *module  = new Module();
 	char * npath = strcat2(3, path, name, ".so");

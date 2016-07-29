@@ -24,7 +24,7 @@ EpollManager::~EpollManager()
 
 void EpollManager::regisHandle(int handle)
 {
-	tmp_event.events = EPOLLIN | EPOLLET;
+	tmp_event.events = EPOLLIN /*| EPOLLET*/;
 	tmp_event.data.fd = handle;
 	int ret = epoll_ctl(m_epoll_handle,EPOLL_CTL_ADD,handle,&tmp_event);	
 	if(ret == -1)
