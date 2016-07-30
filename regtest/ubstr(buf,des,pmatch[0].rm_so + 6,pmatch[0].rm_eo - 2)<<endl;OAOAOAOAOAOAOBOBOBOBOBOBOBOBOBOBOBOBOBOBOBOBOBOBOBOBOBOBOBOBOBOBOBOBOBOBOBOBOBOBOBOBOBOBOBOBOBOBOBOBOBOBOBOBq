@@ -1,0 +1,175 @@
+REGEX(3)                               Linux Programmer's Manual                              REGEX(3)
+
+
+
+NNAAMMEE
+       regcomp, regexec, regerror, regfree - POSIX regex functions
+
+SSYYNNOOPPSSIISS
+       ##iinncclluuddee <<ssyyss//ttyyppeess..hh>>
+       ##iinncclluuddee <<rreeggeexx..hh>>
+
+       iinntt rreeggccoommpp((rreeggeexx__tt **_p_r_e_g,, ccoonnsstt cchhaarr **_r_e_g_e_x,, iinntt _c_f_l_a_g_s));;
+
+       iinntt rreeggeexxeecc((ccoonnsstt rreeggeexx__tt **_p_r_e_g,, ccoonnsstt cchhaarr **_s_t_r_i_n_g,, ssiizzee__tt _n_m_a_t_c_h,,
+                   rreeggmmaattcchh__tt _p_m_a_t_c_h_[_],, iinntt _e_f_l_a_g_s));;
+
+       ssiizzee__tt rreeggeerrrroorr((iinntt _e_r_r_c_o_d_e,, ccoonnsstt rreeggeexx__tt **_p_r_e_g,, cchhaarr **_e_r_r_b_u_f,,
+                       ssiizzee__tt _e_r_r_b_u_f___s_i_z_e));;
+
+       vvooiidd rreeggffrreeee((rreeggeexx__tt **_p_r_e_g));;
+
+DDEESSCCRRIIPPTTIIOONN
+   PPOOSSIIXX rreeggeexx ccoommppiilliinngg
+       rreeggccoommpp()  is  used to compile a regular expression into a form that is suitable for subsequent
+       rreeggeexxeecc() searches.
+
+       rreeggccoommpp() is supplied with _p_r_e_g, a pointer to a pattern buffer storage area; _r_e_g_e_x,  a  pointer
+       to the null-terminated string and _c_f_l_a_g_s, flags used to determine the type of compilation.
+
+       All  regular  expression  searching  must be done via a compiled pattern buffer, thus rreeggeexxeecc()
+       must always be supplied with the address of a rreeggccoommpp() initialized pattern buffer.
+
+       _c_f_l_a_g_s may be the bitwise-oorr of one or more of the following:
+
+       RREEGG__EEXXTTEENNDDEEDD
+              Use PPOOSSIIXX Extended Regular Expression syntax when interpreting _r_e_g_e_x.  If not set, PPOOSSIIXX
+              Basic Regular Expression syntax is used.
+
+       RREEGG__IICCAASSEE
+              Do not differentiate case.  Subsequent rreeggeexxeecc() searches using this pattern buffer will
+              be case insensitive.
+
+       RREEGG__NNOOSSUUBB
+              Do not report position of matches.  The _n_m_a_t_c_h and _p_m_a_t_c_h  arguments  to  rreeggeexxeecc()  are
+              ignored if the pattern buffer supplied was compiled with this flag set.
+
+       RREEGG__NNEEWWLLIINNEE
+              Match-any-character operators don't match a newline.
+
+              A nonmatching list ([[^^......]])  not containing a newline does not match a newline.
+
+              Match-beginning-of-line  operator  (^^) matches the empty string immediately after a new‐
+              line, regardless of whether _e_f_l_a_g_s, the execution flags of rreeggeexxeecc(), contains  RREEGG__NNOOTT‐‐
+              BBOOLL.
+
+              Match-end-of-line  operator  ($$)  matches the empty string immediately before a newline,
+              regardless of whether _e_f_l_a_g_s contains RREEGG__NNOOTTEEOOLL.
+
+   PPOOSSIIXX rreeggeexx mmaattcchhiinngg
+       rreeggeexxeecc() is used to match a null-terminated string against  the  precompiled  pattern  buffer,
+       _p_r_e_g.  _n_m_a_t_c_h and _p_m_a_t_c_h are used to provide information regarding the location of any matches.
+       _e_f_l_a_g_s may be the bitwise-oorr of one or both of RREEGG__NNOOTTBBOOLL and RREEGG__NNOOTTEEOOLL which cause changes in
+       matching behavior described below.
+
+       RREEGG__NNOOTTBBOOLL
+              The match-beginning-of-line operator always fails to match (but see the compilation flag
+              RREEGG__NNEEWWLLIINNEE above) This flag may be used when different portions of a string are  passed
+              to  rreeggeexxeecc() and the beginning of the string should not be interpreted as the beginning
+              of the line.
+
+       RREEGG__NNOOTTEEOOLL
+              The match-end-of-line operator always fails to  match  (but  see  the  compilation  flag
+              RREEGG__NNEEWWLLIINNEE above)
+
+   BByyttee ooffffsseettss
+       Unless  RREEGG__NNOOSSUUBB  was  set for the compilation of the pattern buffer, it is possible to obtain
+       match addressing information.  _p_m_a_t_c_h must be dimensioned to have  at  least  _n_m_a_t_c_h  elements.
+       These are filled in by rreeggeexxeecc() with substring match addresses.  The offsets of the subexpres‐
+       sion starting at the _ith open parenthesis are stored in _p_m_a_t_c_h_[_i_].  The entire regular  expres‐
+       sion's  match  addresses are stored in _p_m_a_t_c_h_[_0_].  (Note that to return the offsets of _N subex‐
+       pression matches, _n_m_a_t_c_h must be at least _N_+_1.)  Any unused structure elements will contain the
+       value -1.
+
+       The _r_e_g_m_a_t_c_h___t structure which is the type of _p_m_a_t_c_h is defined in _<_r_e_g_e_x_._h_>.
+
+           typedef struct {
+               regoff_t rm_so;
+               regoff_t rm_eo;
+           } regmatch_t;
+
+       Each  _r_m___s_o  element  that  is  not -1 indicates the start offset of the next largest substring
+       match within the string.  The relative _r_m___e_o element indicates the end  offset  of  the  match,
+       which is the offset of the first character after the matching text.
+
+   PPOOSSIIXX eerrrroorr rreeppoorrttiinngg
+       rreeggeerrrroorr() is used to turn the error codes that can be returned by both rreeggccoommpp() and rreeggeexxeecc()
+       into error message strings.
+
+       rreeggeerrrroorr() is passed the error code, _e_r_r_c_o_d_e, the pattern buffer, _p_r_e_g, a pointer to a  charac‐
+       ter string buffer, _e_r_r_b_u_f, and the size of the string buffer, _e_r_r_b_u_f___s_i_z_e.  It returns the size
+       of the _e_r_r_b_u_f required to contain the null-terminated error message string.  If both _e_r_r_b_u_f and
+       _e_r_r_b_u_f___s_i_z_e  are  nonzero, _e_r_r_b_u_f is filled in with the first _e_r_r_b_u_f___s_i_z_e _- _1 characters of the
+       error message and a terminating null byte ('\0').
+
+   PPOOSSIIXX ppaatttteerrnn bbuuffffeerr ffrreeeeiinngg
+       Supplying rreeggffrreeee() with a precompiled pattern buffer, _p_r_e_g will free the memory  allocated  to
+       the pattern buffer by the compiling process, rreeggccoommpp().
+
+RREETTUURRNN VVAALLUUEE
+       rreeggccoommpp() returns zero for a successful compilation or an error code for failure.
+
+       rreeggeexxeecc() returns zero for a successful match or RREEGG__NNOOMMAATTCCHH for failure.
+
+EERRRROORRSS
+       The following errors can be returned by rreeggccoommpp():
+
+       RREEGG__BBAADDBBRR
+              Invalid use of back reference operator.
+
+       RREEGG__BBAADDPPAATT
+              Invalid use of pattern operators such as group or list.
+
+       RREEGG__BBAADDRRPPTT
+              Invalid use of repetition operators such as using '*' as the first character.
+
+       RREEGG__EEBBRRAACCEE
+              Un-matched brace interval operators.
+
+       RREEGG__EEBBRRAACCKK
+              Un-matched bracket list operators.
+
+       RREEGG__EECCOOLLLLAATTEE
+              Invalid collating element.
+
+       RREEGG__EECCTTYYPPEE
+              Unknown character class name.
+
+       RREEGG__EEEENNDD
+              Nonspecific error.  This is not defined by POSIX.2.
+
+       RREEGG__EEEESSCCAAPPEE
+              Trailing backslash.
+
+       RREEGG__EEPPAARREENN
+              Un-matched parenthesis group operators.
+
+       RREEGG__EERRAANNGGEE
+              Invalid  use  of the range operator, e.g., the ending point of the range occurs prior to
+              the starting point.
+
+       RREEGG__EESSIIZZEE
+              Compiled regular expression requires a pattern buffer larger than  64Kb.   This  is  not
+              defined by POSIX.2.
+
+       RREEGG__EESSPPAACCEE
+              The regex routines ran out of memory.
+
+       RREEGG__EESSUUBBRREEGG
+              Invalid back reference to a subexpression.
+
+CCOONNFFOORRMMIINNGG TTOO
+       POSIX.1-2001.
+
+SSEEEE AALLSSOO
+       ggrreepp(1), rreeggeexx(7)
+       The glibc manual section, _R_e_g_u_l_a_r _E_x_p_r_e_s_s_i_o_n _M_a_t_c_h_i_n_g
+
+CCOOLLOOPPHHOONN
+       This  page  is  part  of  release  3.54  of  the Linux _m_a_n_-_p_a_g_e_s project.  A description of the
+       project,    and    information    about     reporting     bugs,     can     be     found     at
+       http://www.kernel.org/doc/man-pages/.
+
+
+
+GNU                                           2013-02-11                                      REGEX(3)

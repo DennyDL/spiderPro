@@ -1,0 +1,593 @@
+load success !
+create thread id is :-1220052160
+create thread id is :-1228444864
+create thread id is :-1236837568
+create thread id is :-1245230272
+create thread id is :-1253622976
+create thread id is :-1262015680
+create thread id is :-1270408384
+create thread id is :-1278801088
+create thread id is :-1287193792
+create thread id is :-1295586496
+create thread id is :-1303979200
+create thread id is :-1312371904
+create thread id is :-1320764608
+create thread id is :-1329157312
+create thread id is :-1339032768
+create thread id is :-1349518528
+create thread id is :-1360004288
+create thread id is :-1368396992
+create thread id is :-1376789696
+create thread id is :-1385182400
+create thread id is :-1393575104
+create thread id is :-1401967808
+create thread id is :-1410360512
+create thread id is :-1418753216
+create thread id is :-1427145920
+create thread id is :-1435538624
+create thread id is :-1443931328
+create thread id is :-1452324032
+create thread id is :-1460716736
+create thread id is :-1469109440
+create thread id is :-1477502144
+create thread id is :-1485894848
+create thread id is :-1494287552
+create thread id is :-1502680256
+create thread id is :-1511072960
+create thread id is :-1519465664
+create thread id is :-1527858368
+create thread id is :-1536251072
+create thread id is :-1544643776
+create thread id is :-1553036480
+create thread id is :-1561429184
+create thread id is :-1569821888
+create thread id is :-1578214592
+create thread id is :-1586607296
+create thread id is :-1595000000
+create thread id is :-1603392704
+create thread id is :-1611785408
+create thread id is :-1620178112
+create thread id is :-1628570816
+create thread id is :-1636963520
+create thread id is :-1645356224
+create thread id is :-1653748928
+create thread id is :-1662141632
+create thread id is :-1670534336
+create thread id is :-1678927040
+create thread id is :-1687319744
+create thread id is :-1695712448
+create thread id is :-1704105152
+create thread id is :-1712497856
+create thread id is :-1720890560
+create thread id is :-1729283264
+create thread id is :-1737675968
+create thread id is :-1746068672
+create thread id is :-1754461376
+create thread id is :-1764754624
+create thread id is :-1773147328
+create thread id is :-1783628992
+create thread id is :-1792021696
+create thread id is :-1800414400
+create thread id is :-1808807104
+create thread id is :-1817199808
+create thread id is :-1825592512
+create thread id is :-1833985216
+create thread id is :-1842377920
+create thread id is :-1850770624
+create thread id is :-1859163328
+create thread id is :-1867556032
+create thread id is :-1875948736
+create thread id is :-1884341440
+create thread id is :-1892734144
+create thread id is :-1901126848
+create thread id is :-1909519552
+create thread id is :-1917912256
+create thread id is :-1926304960
+create thread id is :-1934697664
+create thread id is :-1943090368
+create thread id is :-1951483072
+create thread id is :-1959875776
+create thread id is :-1968268480
+create thread id is :-1976661184
+create thread id is :-1985053888
+create thread id is :-1993446592
+create thread id is :-2001839296
+create thread id is :-2010232000
+create thread id is :-2018624704
+create thread id is :-2027017408
+create thread id is :-2035410112
+create thread id is :-2043802816
+create thread id is :-2052195520
+create thread id is :-2060588224
+create get_url_thread_tid is :-2068980928
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /uid-25909722-id-3013117.html HTTP/1.1
+Accept:*/*
+HOST: blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了108个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:5path/home/denny/download/blog.chinaunix.net/1469866709.723831
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************thread_main111***************
+**************getUrl1***************
+**************getUrl2***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.chinaunix.net
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://bbs.chinaunix.net
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://u.it168.com/vip/
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://blog.chinaunix.net
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://u.it168.com/Register?webid=5&returnUrl=http%3A%2F%2Fblog.chinaunix.net%2Fuid-25909722-id-3013117.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://digdeep126.blog.chinaunix.net
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://blog.chinaunix.net/uid-30204791-id-5705047.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://blog.chinaunix.net/uid-24789255-id-5568211.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://blog.chinaunix.net/uid-10718265-id-5141960.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.google.com/ig/add?feedurl=http%3A%2F%2Fblog.chinaunix.net%2Fuid%2F25909722.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.dataguru.cn/zhuanti/hadoop220peizhi.shtml
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.dataguru.cn/zhuanti/hadoopshouce.shtml
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.spongeliu.com/linux/
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://ask.chinaunix.net/question/785970
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://ask.chinaunix.net/question/785964
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://ask.chinaunix.net/question/785935
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://ask.chinaunix.net/question/785919
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://ask.chinaunix.net/question/785702
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://sso.chinaunix.net/Register?return_url=http%3A%2F%2Ft.cublog.com%2F
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.chinaunix.net/about/index.shtml
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.it168.com/bottomfile/it168.shtml
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.chinaunix.net/about/connect.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.chinaunix.net/about/service.html
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://www.it168.com//bottomfile/flgw/fl.htm
+**************getUrl6***************
+**************getUrl3***************
+**************getUrl4***************
+**************getUrl5***************
+http://sso.chinaunix.net/Register?return_url=http%3A%2F%2Fblog.chinaunix.net%2F
+
+**************getUrl6***************
+**************thread_main222***************
+**************thread_main333***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************thread_main444***************
+**************thread_main555***************
+Page写入了主页信息:185690字节
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET / HTTP/1.1
+Accept:*/*
+HOST: www.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了79个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:6path/home/denny/download/www.chinaunix.net/1469866711.184141
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET / HTTP/1.1
+Accept:*/*
+HOST: bbs.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了79个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:7path/home/denny/download/bbs.chinaunix.net/1469866711.565945
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:61.55.167.210
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /vip/ HTTP/1.1
+Accept:*/*
+HOST: u.it168.com
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了77个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:8path/home/denny/download/u.it168.com/1469866711.658915
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET / HTTP/1.1
+Accept:*/*
+HOST: blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了80个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:9path/home/denny/download/blog.chinaunix.net/1469866711.953557
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:61.55.167.210
+**************thread_main111***************
+**************getUrl1***************
+**************getUrl2***************
+**************thread_main222***************
+**************thread_main333***************
+**************thread_main444***************
+**************thread_main555***************
+Page写入了主页信息:562字节
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /Register?webid=5&returnUrl=http%3A%2F%2Fblog.chinaunix.net%2Fuid-25909722-id-3013117.html HTTP/1.1
+Accept:*/*
+HOST: u.it168.com
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了162个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:10path/home/denny/download/u.it168.com/1469866712.2434
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET / HTTP/1.1
+Accept:*/*
+HOST: digdeep126.blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了91个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:11path/home/denny/download/digdeep126.blog.chinaunix.net/1469866712.199800
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /uid-30204791-id-5705047.html HTTP/1.1
+Accept:*/*
+HOST: blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了108个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:12path/home/denny/download/blog.chinaunix.net/1469866712.247644
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /uid-24789255-id-5568211.html HTTP/1.1
+Accept:*/*
+HOST: blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了108个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:13path/home/denny/download/blog.chinaunix.net/1469866712.300148
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:112.25.11.155
+**************bulidConnect6***************
+connect success
+**************downloader2***************
+**************downloader3***************
+GET /uid-10718265-id-5141960.html HTTP/1.1
+Accept:*/*
+HOST: blog.chinaunix.net
+Connection: Keep-Alive
+
+
+消息发送成功，共发送了108个字节！
+
+**************downloader4***************
+**************getUrlFromQuque99***************
+**************getUrlFromQuque100***************
+**************getUrlFromQuque110***************
+**************getUrlFromQuque120***************
+fd:14path/home/denny/download/blog.chinaunix.net/1469866712.342259
+**************getUrlFromQuque22***************
+**************getUrlFromQuque33***************
+**************getUrlFromQuque44***************
+**************getUrlFromQuque66***************
+**************getUrlFromQuque77***************
+**************getUrlFromQuque88***************
+**************downloader1***************
+**************bulidConnect1***************
+**************bulidConnect2***************
+**************bulidConnect3***************
+**************bulidConnect4***************
+**************bulidConnect4.2***************
+**************bulidConnect4.5***************
+**************bulidConnect5***************
+ip:37.61.54.158
+**************thread_main111***************
+**************getUrl1***************
+**************getUrl2***************
+**************thread_main222***************
+**************thread_main333***************
+**************thread_main444***************
+**************thread_main555***************

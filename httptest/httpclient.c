@@ -67,7 +67,7 @@ int main(int argc, char **argv)
         //strcat(request,"Content-Type: text/html\r\n");
         //strcat(request,"Content-Length: 1024\r\n");
         strcat(str1,"Connection: Keep-Alive\r\n");
-	strcat(str1,"\r\n");
+		strcat(str1,"\r\n");
         //strcat(str1,"Cache-Control: no-cache\r\n\r\n");
         printf("%s\n",str1);
  
