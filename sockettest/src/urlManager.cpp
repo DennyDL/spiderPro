@@ -24,27 +24,31 @@ private:
 };
 */
 
-int UrlManager::addUrl(string url_str)
+int UrlManager::addUrl(string url_str,int depth)
 {
 	Url *url = new Url();
 	url->parseUrl(url_str);
+	cout <<"**************addUrl111***************"<<endl;
 	if(!findUrl(url_str))
 	{
+		url->setDepth(depth);
 		this->m_url_map.insert(pair<string,StructUrl*>(url_str,url->getUrlData()));
 		this->m_url_quque.push(url->getUrlData());
 	}
+	cout <<"**************addUrl222***************"<<endl;
 	return 1;
 }
 
-int UrlManager::addUrlList(list<string> url_strs)
+int UrlManager::addUrlList(list<string> url_strs,int depth)
 {
 	list<string>::iterator itor = url_strs.begin();;
-
+	cout <<"**************addUrlList111***************"<<endl;
 	while(itor != url_strs.end())
 	{
-		addUrl(*itor);
+		addUrl(*itor,depth);
 		itor++;
 	}
+	cout <<"**************addUrlList222***************"<<endl;
 	return 1;
 }
 

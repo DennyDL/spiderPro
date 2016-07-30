@@ -2,7 +2,7 @@ max_job_num=4
 
 # From which urls to start job. 
 # Comma seperated if you have more than one seed.
-seeds=http://www.uestc.edu.cn
+seeds=http://tieba.baidu.com/index.html
 #include_prefixes=
 #exclude_prefixes=
 

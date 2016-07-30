@@ -71,12 +71,12 @@ int Socket::setNonblocking(int fd)
     opts = fcntl(fd, F_GETFL);
     if(opts < 0) {
         perror("fcntl(F_GETFL)\n");
-        exit(1);
+        return -1;
     }
     opts = (opts | O_NONBLOCK);
     if(fcntl(fd, F_SETFL, opts) < 0) {
         perror("fcntl(F_SETFL)\n");
-        exit(1);
+        return -1;
     }
 	return 0;
 }
@@ -86,21 +86,37 @@ int Socket::bulidConnect(StructUrl* url,int port)
 {
 	struct sockaddr_in serveraddr;
 	struct hostent *pURL = NULL;
+	cout <<"**************bulidConnect1***************"<<endl;
 	this->m_socket_handle = socket(AF_INET,SOCK_STREAM,0);
 	if(this->m_socket_handle < 0)
 	{
 		perror("socket err");
 		return -1;
 	}
-	this->m_host = (url->siteName).c_str();
-	pURL = gethostbyname(this->m_host);//将上面获得的主机信息通过域名解析函数获得域>名信息
+	cout <<"**************bulidConnect2***************"<<endl;
 	
+	if((url->siteName).length() < 1)
+	{
+		cout <<"host NULL"<<endl;
+		return -1;
+	}
+	this->m_host = (url->siteName).c_str();
+	
+	cout <<"**************bulidConnect3***************"<<endl;
+	pURL = gethostbyname(this->m_host);//将上面获得的主机信息通过域名解析函数获得域>名信息
+	if(pURL == 0)
+		return -1;
+	
+	cout <<"**************bulidConnect4***************"<<endl;
 	bzero(&serveraddr,sizeof(serveraddr));
 	serveraddr.sin_family = AF_INET;
 	serveraddr.sin_port = htons(port);
+	cout <<"**************bulidConnect4.2***************"<<endl;
 	serveraddr.sin_addr.s_addr = *((unsigned long*)pURL->h_addr_list[0]);
 	char ipstr[128];
+	cout <<"**************bulidConnect4.5***************"<<endl;
 	inet_ntop(AF_INET,&serveraddr.sin_addr.s_addr,ipstr, sizeof(ipstr));
+	cout <<"**************bulidConnect5***************"<<endl;
 	cout <<"ip:"<<ipstr <<endl;
 	int ret = connect(this->m_socket_handle,(struct sockaddr*)&serveraddr,sizeof(serveraddr));
 	if(ret == -1)
@@ -108,6 +124,7 @@ int Socket::bulidConnect(StructUrl* url,int port)
 		perror("connect err");
 		return -1;
 	}
+	cout <<"**************bulidConnect6***************"<<endl;
 	cout <<"connect success"<<endl;
 	return 0;
 }

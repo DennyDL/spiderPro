@@ -13,7 +13,7 @@
 ConfigParser* ConfigParser::__self = NULL;//放在confparser.h会出现重复定义，注意，static是在编译阶段就分配内存
 using namespace std;
 
-#define PTHREAD_NUM 30
+#define PTHREAD_NUM 100
 #define OPEN_MAX 2048
 #include <stdio.h>
 #include <sys/types.h>          /* See NOTES */
@@ -27,11 +27,12 @@ using namespace std;
 
 #include "getTime.h"
 #include "CreateDirectory.h"
-
+#include "getUrl.h"
 #define BUFSIZE 65535
 
 int connectfd_ready;
 map<int,string> fd_path_map;
+map<int,StructUrl*> fd_url_map;
 pthread_t thread_tid[PTHREAD_NUM];
 pthread_attr_t attr;
 pthread_mutex_t connectfd_ready_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -55,27 +56,41 @@ void* getUrlFromQuque(void* arg)
 	StructUrl *p_url = NULL;
 	while(1)
 	{
+		//cout <<"**************55***************"<<endl;
         if(!(url_manager->m_url_quque).empty())
         {
+        	cout <<"**************getUrlFromQuque66***************"<<endl;
         	p_url = url_manager->getUrlFromQuque();
+        	cout <<"**************getUrlFromQuque77***************"<<endl;
+        	if(p_url->depth > cp->getDepth())
+        		continue;
+        	cout <<"**************getUrlFromQuque88***************"<<endl;
 		    int sockfd = download->httpQuest(p_url);
-
+		    if(sockfd == -1)
+		    	continue;
+		    cout <<"**************getUrlFromQuque99***************"<<endl;
 	        str_path="/home/denny/download/";
 	        str_path.append(p_url->siteName);
 	        str_path.append("/");
+	        cout <<"**************getUrlFromQuque100***************"<<endl;
 	        if(CreateDirectory(str_path.c_str()) == -1)
 	        	cout<<"CreateDirectory err"<<endl;
-
+	        cout <<"**************getUrlFromQuque110***************"<<endl;
 	        char* str_time = getTime();
 	        str_path.append(str_time);
 	        free(str_time);
+	        cout <<"**************getUrlFromQuque120***************"<<endl;
 	        cout<<"fd:"<<sockfd<<"path"<<str_path<<endl;
 	        fd_path_map.insert(pair<int,string>(sockfd,str_path));
-	        
+	        cout <<"**************getUrlFromQuque22***************"<<endl;
+	        fd_url_map.insert(pair<int,StructUrl*>(sockfd,p_url));
+	        cout <<"**************getUrlFromQuque33***************"<<endl;
 	        epollmanager->regisHandle(sockfd);
+	        cout <<"**************getUrlFromQuque44***************"<<endl;
         }
         else
         {
+        	
         	sleep(0.5);
         }
         
@@ -86,6 +101,8 @@ void* thread_main(void* arg)
 {
 	int connectfd;
 	int page_num = -1;
+	StructUrl *p_url = NULL;
+	list<string> str_urls;
 	//char rev_data[BUFSIZE];
 	HandleData handle_data;
 	char* rev_data = (char*)malloc(BUFSIZE);
@@ -98,20 +115,52 @@ void* thread_main(void* arg)
 		pthread_mutex_unlock(&connectfd_ready_mutex);
 		
 		download->httpRespose(connectfd,rev_data,BUFSIZE);
+/*		cout <<"**************1***************"<<endl;
+		if(getUrl(str_urls,rev_data))
+		{
+			cout <<"**************2***************"<<endl;
+			list<string>::iterator itor_url = str_urls.begin();
+			while(itor_url != str_urls.end())
+			{
+				cout << *itor_url <<endl;
+				itor_url++;
+			}
+			cout <<"**************3***************"<<endl;
+		}*/
+		cout <<"**************thread_main111***************"<<endl;
+		if(getUrl(str_urls,rev_data))
+		{
+			cout <<"**************thread_main222***************"<<endl;
+			map<int,StructUrl*>::iterator itor_url = fd_url_map.find(connectfd);
+			{
+				if(itor_url != fd_url_map.end())
+				{
+					p_url = itor_url->second;
+					if(p_url == NULL)
+						continue;
+				}
+			}
+			cout <<"**************thread_main333***************"<<endl;
+			url_manager->addUrlList(str_urls,(p_url->depth)+1);
+			cout <<"**************thread_main444***************"<<endl;
+		}
 		
+		str_urls.clear();
+		cout <<"**************thread_main555***************"<<endl;
 		map<int,string>::iterator itor = fd_path_map.find(connectfd);
 		if(itor != fd_path_map.end())
 		{
 			handle_data.data = rev_data;
 			handle_data.path = (itor->second).c_str();
 
-			Module* module = dso_manager->getModule("savehtml");
-			if(module != NULL)
-    			page_num = module->handle((void *)&handle_data);
+			Module* save_module = dso_manager->getModule("savehtml");
+			if(save_module != NULL)
+    			page_num = save_module->handle((void *)&handle_data);
     		if(page_num == 0)
     		{
     			epollmanager->unregisHandle(connectfd);
     			fd_path_map.erase(connectfd);
+    			fd_url_map.erase(connectfd);
     		}
 		}
 	
@@ -144,8 +193,8 @@ int main()
     	cout << "load success !"<<endl;
 	  itor_list++;
     }
-     
-	url_manager->addUrl(cp->getUrlSeed());
+
+	url_manager->addUrl(cp->getUrlSeed(),0);
 
 	int ret = pthread_attr_init(&attr);
 	if(ret != 0)

@@ -129,3 +129,8 @@ StructUrl* Url::getUrlData()
 {
 	return &m_url;
 }
+
+void Url::setDepth(int depth)
+{
+	m_url.depth = depth;
+}

@@ -16,9 +16,24 @@ Downloader::~Downloader()
 
 int Downloader::httpQuest(StructUrl *p_url)
 {
-	m_socket->bulidConnect(p_url,PORT);
-	m_socket->setNonblocking(m_socket->m_socket_handle);
-    m_socket->request(m_socket->m_socket_handle,p_url);
+	if(p_url == NULL)
+	{
+		return -1;
+	}
+	int ret = 0;
+	cout <<"**************downloader1***************"<<endl;
+	ret = m_socket->bulidConnect(p_url,PORT);
+	if(ret == -1)
+		return -1;
+	cout <<"**************downloader2***************"<<endl;
+	ret = m_socket->setNonblocking(m_socket->m_socket_handle);
+	if(ret == -1)
+		return -1;
+	cout <<"**************downloader3***************"<<endl;
+    ret = m_socket->request(m_socket->m_socket_handle,p_url);
+    if(ret == -1)
+		return -1;
+    cout <<"**************downloader4***************"<<endl;
     return m_socket->m_socket_handle;
 }
 
